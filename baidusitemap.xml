@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/02/03/my-new-post/</loc>
+    <lastmod>2016-02-03T09:27:19.327Z</lastmod>
+    <data>
+        <display>
+        <title>markdownPad 2简介</title>
+        <pubTime>2016-02-03T08:15:27.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="转载" url="http://yoursite.com/categories/%E8%BD%AC%E8%BD%BD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/02/03/markdown-note/</loc>
+    <lastmod>2016-02-03T09:25:31.536Z</lastmod>
+    <data>
+        <display>
+        <title>markdown使用教程</title>
+        <pubTime>2016-02-03T08:15:27.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="转载" url="http://yoursite.com/categories/%E8%BD%AC%E8%BD%BD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/02/03/newText/</loc>
+    <lastmod>2016-02-03T09:23:39.152Z</lastmod>
+    <data>
+        <display>
+        <title>newText</title>
+        <pubTime>2016-02-03T08:15:27.000Z</pubTime>
+        
+        <tag>iOS开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS开发" url="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+  <url>
+    <loc>http://yoursite.com/2016/02/03/hello-world/</loc>
+    <lastmod>2016-02-02T05:34:36.522Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-02-03T08:14:30.288Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
