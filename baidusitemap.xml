@@ -4,15 +4,20 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/02/06/hexo-note/</loc>
-    <lastmod>2016-02-06T13:26:05.601Z</lastmod>
+    <loc>http://yoursite.com/2016/02/03/hexo-note/</loc>
+    <lastmod>2016-02-06T13:31:57.182Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2016-02-06T13:26:05.601Z</pubTime>
+        <title>Hexo+github Pages搭建个人博客教程</title>
+        <pubTime>2016-02-03T08:15:27.000Z</pubTime>
         
+        <tag>Hexo</tag>
+         
          
            
+             
+              <breadCrumb title="Hexo教程" url="http://yoursite.com/categories/Hexo%E6%95%99%E7%A8%8B/"/>
+          
         </display>
     </data>
     </url>
