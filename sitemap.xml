@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2016/02/06/hexo-note/</loc>
-    <lastmod>2016-02-06T13:09:32.305Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2016/02/03/markdown-note/</loc>
     <lastmod>2016-02-06T13:04:33.234Z</lastmod>
   </url>
