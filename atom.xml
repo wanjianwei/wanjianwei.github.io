@@ -476,12 +476,12 @@ _   底线
   </entry>
   
   <entry>
-    <title><![CDATA[Hexo+github Pages搭建个人博客教程]]></title>
+    <title><![CDATA[Hexo+github搭建个人博客教程]]></title>
     <link href="http://yoursite.com/2016/02/03/hexo-note/"/>
     <id>http://yoursite.com/2016/02/03/hexo-note/</id>
     <published>2016-02-03T08:15:27.000Z</published>
-    <updated>2016-02-06T13:31:57.182Z</updated>
-    <content type="html"><![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:  </p>
+    <updated>2016-02-06T13:40:47.531Z</updated>
+    <content type="html"><![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
 <blockquote>
 <p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
 </blockquote>
@@ -542,7 +542,7 @@ _   底线
 <h3 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h3><p>　　一些东西在我们看来很难，其实是因为我们对它不够了解，就拿搭建这个个人博客来说，网上有许多不同的实现方法，但如果我们只停留在阅读教程而不是去亲手实践，是无法体会到学习一门新技术的快乐的。重要的还是我们要有一个敢于挑战的心，一种Geek的精神，敢于钻研，就一定会有所收获的。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:  </p>
+    <![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
 <blockquote>
 <p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
 </blockquote>]]>
