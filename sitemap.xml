@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/02/06/hexo-github-pages-%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2016-02-06T13:06:23.202Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/03/markdown-note/</loc>
+    <lastmod>2016-02-06T13:04:33.234Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/about/certificates.html</loc>
     <lastmod>2016-02-05T14:15:39.193Z</lastmod>
   </url>
@@ -9,21 +19,6 @@
   <url>
     <loc>http://yoursite.com/about/index.html</loc>
     <lastmod>2016-02-05T14:14:15.964Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/02/03/my-new-post/</loc>
-    <lastmod>2016-02-03T09:27:19.327Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/02/03/markdown-note/</loc>
-    <lastmod>2016-02-03T09:25:31.536Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/02/03/newText/</loc>
-    <lastmod>2016-02-03T09:23:39.152Z</lastmod>
   </url>
   
   <url>
@@ -39,11 +34,6 @@
   <url>
     <loc>http://yoursite.com/404.html</loc>
     <lastmod>2016-02-03T06:25:31.673Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/02/03/hello-world/</loc>
-    <lastmod>2016-02-02T05:34:36.522Z</lastmod>
   </url>
   
 </urlset>
