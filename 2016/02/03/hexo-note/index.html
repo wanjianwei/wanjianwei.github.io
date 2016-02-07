@@ -70,7 +70,7 @@
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/hexo3.jpg">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/hexo4.jpg">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/hexo5.jpg">
-<meta property="og:updated_time" content="2016-02-06T13:40:47.531Z">
+<meta property="og:updated_time" content="2016-02-07T07:14:47.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+github搭建个人博客教程">
 <meta name="twitter:description" content="步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是g">
@@ -320,7 +320,25 @@
 <li>安装完成后，选择某个盘符下建立一个文件夹（比如在D盘建立一个文件夹，命名为HEXO）用来存放建立个人博客所需要的所有文件，并进入该文件夹，在任意位置单击鼠标右键，选择“Git　Bash　here”，打开Git　bash，输入“hexo　init”，来初始化文件夹，成功后，重新进入文件夹，会发现里面已经有文件填充了。</li>
 </ul>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo2.jpg" alt="wenjainjia"></p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo2.jpg" alt="wenjainjia">  </p>
+<ul>
+<li>deploy_git：执行hexo　deploy命令部署到Github上的内容目录</li>
+<li>public：执行hexo　generate命令，输出的静态网页内容目录</li>
+<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
+<li>scripts：扩展脚本目录，这里可以自定义一些JavaScript脚本</li>
+<li><p>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。  </p>
+<blockquote>
+<ul>
+<li>_drafts：存储草稿文章的目录  </li>
+<li>_posts：存储发布文章的目录</li>
+</ul>
+</blockquote>
+</li>
+<li><p>themes：主题文件目录</p>
+</li>
+<li>_config.yml：全局配置文件</li>
+<li>package.json：应用程序数据，指明hexo的版本等信息</li>
+</ul>
 </blockquote>
 <ul>
 <li>登录自己的github账号（没有的可<a href="https://github.com/" target="_blank" rel="external">在此</a>注册），新建一个repository，并用自己的账号名来命名。比如我的github账号为wanjianwei，则我刚刚建立的repository名字应该是wanjianwei.github.io  </li>
@@ -479,7 +497,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
