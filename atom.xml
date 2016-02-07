@@ -4,7 +4,7 @@
   <subtitle><![CDATA[从心所愿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-07T07:01:27.650Z</updated>
+  <updated>2016-02-07T07:20:24.650Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,10 +19,11 @@
     <link href="http://yoursite.com/2016/02/07/hexo%E8%AF%AD%E6%B3%95/"/>
     <id>http://yoursite.com/2016/02/07/hexo语法/</id>
     <published>2016-02-07T05:59:28.000Z</published>
-    <updated>2016-02-07T07:01:27.650Z</updated>
+    <updated>2016-02-07T07:20:24.650Z</updated>
     <content type="html"><![CDATA[<h3 id="u5E38_u7528_u7B80_u5199_u547D_u4EE4"><a href="#u5E38_u7528_u7B80_u5199_u547D_u4EE4" class="headerlink" title="常用简写命令"></a>常用简写命令</h3><blockquote>
-<p>hexo　n　“filename”　==　hexo　new　“filename”　==　hexo　new　post　“filename”　<em>#该命令执行后会在./source/_post目录下生成一个名为“filename”的md文件，可供我们输入博客内容</em>；<br> hexo　p　==　hexo　publish　<em>#生成草稿</em>；<br> hexo　g　==　hexo　generate　<em>#在本地生成静态网页至public目录下</em>；<br> hexo　s　==　hexo　server　<em>#启动本地服务预览，打开浏览器，输入“http：//localhost：4000”即可查看编辑效果</em>；<br> hexo　ｄ　==　hexo　deploy　<em>#部署到github等云空间</em>；<br> hexo　new　page　“pageName”　<em>#新建页面，该命令执行后会在source目录下生成一个已“pageName”命名的文件夹</em>；</p>
+<p>hexo　n　“filename”　==　hexo　new　“filename”　==　hexo　new　post　“filename”　<em>#该命令执行后会在./source/_post目录下生成一个名为“filename”的md文件，可供我们输入博客内容</em>；<br> hexo　p　==　hexo　publish　<em>#生成草稿</em>；<br> hexo　g　==　hexo　generate　<em>#在本地生成静态网页至public目录下</em>；<br> hexo　s　==　hexo　server　<em>#启动本地服务预览，打开浏览器，输入“http：//localhost：4000”即可查看编辑效果</em>；<br> hexo　ｄ　==　hexo　deploy　<em>#部署到github等云空间</em>；<br> hexo　new　page　“pageName”　<em>#新建页面，该命令执行后会在source目录下生成一个已“pageName”命名的文件夹</em>；  </p>
 </blockquote>
+<a id="more"></a>
 <h3 id="front-matter_u8BBE_u7F6E"><a href="#front-matter_u8BBE_u7F6E" class="headerlink" title="front-matter设置"></a>front-matter设置</h3><p>当我们执行“hexo　new ‘我的博客’”命令，新建一个博客时，打开对应生成的md文件，里面或许已经填入了基本的front-matter字段（eg：title，date），我们可以在这里设置博客的基本情况，如下图所示：  </p>
 <blockquote>
 <p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo6.jpg" alt="front-matter设置"></p>
@@ -34,7 +35,10 @@
 <p>当然，还有其它的一些可添加字段，本文只列出了一些常见的。更详细的，我们可以查看Hexo的官方资料。<br><em>注意：front-matter中每个字段名称的冒号后面要有空格，否则Hexo无法解析</em>。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="u5E38_u7528_u7B80_u5199_u547D_u4EE4"><a href="#u5E38_u7528_u7B80_u5199_u547D_u4EE4" class="headerlink" title="常用简写命令"></a>常用简写命令</h3]]>
+    <![CDATA[<h3 id="u5E38_u7528_u7B80_u5199_u547D_u4EE4"><a href="#u5E38_u7528_u7B80_u5199_u547D_u4EE4" class="headerlink" title="常用简写命令"></a>常用简写命令</h3><blockquote>
+<p>hexo　n　“filename”　==　hexo　new　“filename”　==　hexo　new　post　“filename”　<em>#该命令执行后会在./source/_post目录下生成一个名为“filename”的md文件，可供我们输入博客内容</em>；<br> hexo　p　==　hexo　publish　<em>#生成草稿</em>；<br> hexo　g　==　hexo　generate　<em>#在本地生成静态网页至public目录下</em>；<br> hexo　s　==　hexo　server　<em>#启动本地服务预览，打开浏览器，输入“http：//localhost：4000”即可查看编辑效果</em>；<br> hexo　ｄ　==　hexo　deploy　<em>#部署到github等云空间</em>；<br> hexo　new　page　“pageName”　<em>#新建页面，该命令执行后会在source目录下生成一个已“pageName”命名的文件夹</em>；  </p>
+</blockquote>]]>
+    
     </summary>
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
@@ -509,22 +513,22 @@ _   底线
     <link href="http://yoursite.com/2016/02/03/hexo-note/"/>
     <id>http://yoursite.com/2016/02/03/hexo-note/</id>
     <published>2016-02-03T08:15:27.000Z</published>
-    <updated>2016-02-07T07:14:47.099Z</updated>
+    <updated>2016-02-07T07:19:51.034Z</updated>
     <content type="html"><![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
 <blockquote>
 <p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
 </blockquote>
 <a id="more"></a>
 <h3 id="u5B89_u88C5_u6B65_u9AA4"><a href="#u5B89_u88C5_u6B65_u9AA4" class="headerlink" title="安装步骤"></a>安装步骤</h3><ul>
-<li>下载并安装<a href="http://git-scm.com/download/" target="_blank" rel="external">Git</a>  </li>
-<li>下载并安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li>在上述安装完成后，在window下打开cmd，输入如下命令，利用npm命令安装hexo  </li>
+<li>一、下载并安装<a href="http://git-scm.com/download/" target="_blank" rel="external">Git</a>  </li>
+<li>二、下载并安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>三、在上述安装完成后，在window下打开cmd，输入如下命令，利用npm命令安装hexo  </li>
 </ul>
 <blockquote>
 <p>npm install -g hexo</p>
 </blockquote>
 <ul>
-<li>安装完成后，选择某个盘符下建立一个文件夹（比如在D盘建立一个文件夹，命名为HEXO）用来存放建立个人博客所需要的所有文件，并进入该文件夹，在任意位置单击鼠标右键，选择“Git　Bash　here”，打开Git　bash，输入“hexo　init”，来初始化文件夹，成功后，重新进入文件夹，会发现里面已经有文件填充了。</li>
+<li>四、安装完成后，选择某个盘符下建立一个文件夹（比如在D盘建立一个文件夹，命名为HEXO）用来存放建立个人博客所需要的所有文件，并进入该文件夹，在任意位置单击鼠标右键，选择“Git　Bash　here”，打开Git　bash，输入“hexo　init”，来初始化文件夹，成功后，重新进入文件夹，会发现里面已经有文件填充了。</li>
 </ul>
 <blockquote>
 <p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo2.jpg" alt="wenjainjia">  </p>
@@ -533,22 +537,22 @@ _   底线
 <li>public：执行hexo　generate命令，输出的静态网页内容目录</li>
 <li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
 <li>scripts：扩展脚本目录，这里可以自定义一些JavaScript脚本</li>
-<li><p>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。  </p>
-<blockquote>
+<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。  <blockquote>
 <ul>
 <li>_drafts：存储草稿文章的目录  </li>
 <li>_posts：存储发布文章的目录</li>
 </ul>
 </blockquote>
 </li>
-<li><p>themes：主题文件目录</p>
-</li>
+</ul>
+<ul>
+<li>themes：主题文件目录</li>
 <li>_config.yml：全局配置文件</li>
-<li>package.json：应用程序数据，指明hexo的版本等信息</li>
+<li>package.json：应用程序数据，指明hexo的版本等信息  </li>
 </ul>
 </blockquote>
 <ul>
-<li>登录自己的github账号（没有的可<a href="https://github.com/" target="_blank" rel="external">在此</a>注册），新建一个repository，并用自己的账号名来命名。比如我的github账号为wanjianwei，则我刚刚建立的repository名字应该是wanjianwei.github.io  </li>
+<li>五、登录自己的github账号（没有的可<a href="https://github.com/" target="_blank" rel="external">在此</a>注册），新建一个repository，并用自己的账号名来命名。比如我的github账号为wanjianwei，则我刚刚建立的repository名字应该是wanjianwei.github.io  </li>
 </ul>
 <h3 id="u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A"><a href="#u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A" class="headerlink" title="与github pages进行绑定"></a>与github pages进行绑定</h3><p>　　在完成以上安装步骤后，我们事实上已经在本地搭建了一个简单的hexo博客站点，进入存放hexo相关文件的文件夹，点击鼠标右键-&gt;”Git Bash here”,分别输入以下命令后，即可打开浏览器，访问“<a href="http://localhost:4000”" target="_blank" rel="external">http://localhost:4000”</a>  即可打开hexo的Hello　World界面</p>
 <blockquote>

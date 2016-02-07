@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/02/03/hexo-note/</loc>
-    <lastmod>2016-02-07T07:14:47.099Z</lastmod>
+    <loc>http://yoursite.com/2016/02/07/hexo%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2016-02-07T07:20:24.650Z</lastmod>
     <data>
         <display>
-        <title>Hexo+github搭建个人博客教程</title>
-        <pubTime>2016-02-03T08:15:27.000Z</pubTime>
+        <title>hexo常用命令总结</title>
+        <pubTime>2016-02-07T05:59:28.000Z</pubTime>
         
         <tag>Hexo</tag>
          
@@ -24,12 +24,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/02/07/hexo%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2016-02-07T07:01:27.650Z</lastmod>
+    <loc>http://yoursite.com/2016/02/03/hexo-note/</loc>
+    <lastmod>2016-02-07T07:19:51.034Z</lastmod>
     <data>
         <display>
-        <title>hexo常用命令总结</title>
-        <pubTime>2016-02-07T05:59:28.000Z</pubTime>
+        <title>Hexo+github搭建个人博客教程</title>
+        <pubTime>2016-02-03T08:15:27.000Z</pubTime>
         
         <tag>Hexo</tag>
          
