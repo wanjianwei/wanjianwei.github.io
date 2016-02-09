@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    <lastmod>2016-02-09T14:56:41.877Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/02/09/Hexo%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
     <lastmod>2016-02-09T14:33:46.286Z</lastmod>
   </url>
@@ -24,11 +29,6 @@
   <url>
     <loc>http://yoursite.com/about/certificates.html</loc>
     <lastmod>2016-02-05T14:15:39.193Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    <lastmod>2016-02-05T14:14:15.964Z</lastmod>
   </url>
   
   <url>
