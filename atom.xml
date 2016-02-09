@@ -4,7 +4,7 @@
   <subtitle><![CDATA[从心所愿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-09T14:23:43.602Z</updated>
+  <updated>2016-02-09T14:33:46.286Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,20 +19,20 @@
     <link href="http://yoursite.com/2016/02/09/Hexo%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
     <id>http://yoursite.com/2016/02/09/Hexo使用常见问题汇总/</id>
     <published>2016-02-09T13:40:58.000Z</published>
-    <updated>2016-02-09T14:23:43.602Z</updated>
+    <updated>2016-02-09T14:33:46.286Z</updated>
     <content type="html"><![CDATA[<ul>
-<li>使用Next主题时，Hexo博客的首页只显示一篇文章</li>
+<li>一、使用Next主题时，Hexo博客的首页只显示一篇文章</li>
 </ul>
 <blockquote>
 <p>解决方法：hexo　clean<br>　　　　　hexo　g<br>　　　　　hexo　g<br>　　　　　hexo　d  </p>
 <p>如上所示，使用“hexo　clean”指令清楚缓存后，使用“hexo　g”命令重复渲染两次就能正常显示了；  </p>
 </blockquote>
 <ul>
-<li><p>使用“hexo　n　“filename””生成新的md文件后，若想要编辑文章的front-matter，注意front-matter必须在“—”换行符之间，而且不能和“—”换行符之间有空行，否则Hexo无法解析；  </p>
+<li><p>二、使用“hexo　n　“filename””生成新的md文件后，若想要编辑文章的front-matter，注意front-matter必须在“—”换行符之间，而且不能和“—”换行符之间有空行，否则Hexo无法解析；  </p>
 </li>
-<li><p>Hexo中使用markdown语法编辑博客，必须按照严格的markdown语法，比如解析“#”标题，最后一个“#”后必须加空格，才能在Hexo中正确显示，而这也是markdown推荐的写法，实际上有些情况下，不加空格也可以解析，只是Hexo中不允许；  </p>
+<li><p>三、Hexo中使用markdown语法编辑博客，必须按照严格的markdown语法，比如解析“#”标题，最后一个“#”后必须加空格，才能在Hexo中正确显示，而这也是markdown推荐的写法，实际上有些情况下，不加空格也可以解析，只是Hexo中不允许；  </p>
 </li>
-<li><p>如果要给自己部署在github上的Hexo绑定自己的个人域名，一般会选择在repository中的master分支中新建一个CNAME文件，并填入自己要绑定的域名，但这里有一个坑要注意，master分支里的内容都是自动生成的，而且会完全覆盖之前的内容，所以repository中的CNAME文件会在每次部署后消失。如果不想每次部署后都在repository重新添加一个CNAME文件，我们可以下载<a href="https://github.com/leecrossley/hexo-generator-cname" target="_blank" rel="external">hexo-generator-cname</a>,安装及配置官网上有。这时每次执行“hexo　g”之后会在public目录中生成一个CNAME文件，把你的域名加进去再部署就行了（记住，每次执行完“hexo　ｇ”命令后一定要将你的域名写入CNAME文件中，因为每次执行“hexo　g”命令，public目录中的CNAME文件都会被覆盖）。</p>
+<li><p>四、如果要给自己部署在github上的Hexo绑定自己的个人域名，一般会选择在repository中的master分支中新建一个CNAME文件，并填入自己要绑定的域名，但这里有一个坑要注意，master分支里的内容都是自动生成的，而且会完全覆盖之前的内容，所以repository中的CNAME文件会在每次部署后消失。如果不想每次部署后都在repository重新添加一个CNAME文件，我们可以下载<a href="https://github.com/leecrossley/hexo-generator-cname" target="_blank" rel="external">hexo-generator-cname</a>,安装及配置官网上有。这时每次执行“hexo　g”之后会在public目录中生成一个CNAME文件，把你的域名加进去再部署就行了（记住，每次执行完“hexo　ｇ”命令后一定要将你的域名写入CNAME文件中，因为每次执行“hexo　g”命令，public目录中的CNAME文件都会被覆盖）。</p>
 </li>
 </ul>
 ]]></content>
@@ -54,7 +54,7 @@
     <link href="http://yoursite.com/2016/02/07/hexo%E8%AF%AD%E6%B3%95/"/>
     <id>http://yoursite.com/2016/02/07/hexo语法/</id>
     <published>2016-02-07T05:59:28.000Z</published>
-    <updated>2016-02-07T07:20:24.650Z</updated>
+    <updated>2016-02-09T14:32:46.617Z</updated>
     <content type="html"><![CDATA[<h3 id="u5E38_u7528_u7B80_u5199_u547D_u4EE4"><a href="#u5E38_u7528_u7B80_u5199_u547D_u4EE4" class="headerlink" title="常用简写命令"></a>常用简写命令</h3><blockquote>
 <p>hexo　n　“filename”　==　hexo　new　“filename”　==　hexo　new　post　“filename”　<em>#该命令执行后会在./source/_post目录下生成一个名为“filename”的md文件，可供我们输入博客内容</em>；<br> hexo　p　==　hexo　publish　<em>#生成草稿</em>；<br> hexo　g　==　hexo　generate　<em>#在本地生成静态网页至public目录下</em>；<br> hexo　s　==　hexo　server　<em>#启动本地服务预览，打开浏览器，输入“http：//localhost：4000”即可查看编辑效果</em>；<br> hexo　ｄ　==　hexo　deploy　<em>#部署到github等云空间</em>；<br> hexo　new　page　“pageName”　<em>#新建页面，该命令执行后会在source目录下生成一个已“pageName”命名的文件夹</em>；  </p>
 </blockquote>
@@ -63,11 +63,11 @@
 <blockquote>
 <p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo6.jpg" alt="front-matter设置"></p>
 </blockquote>
-<p>以上各个字段的解释如下：  </p>
+<p><strong>以上各个字段的解释如下</strong>：  </p>
 <blockquote>
 <p>title： 博客的名称；<br>layout： layout是可选参数，默认值为post。我们可以在到scaffolds目录下查看有哪些layout类型，这些文件名称就是layout名称。当然你可以添加自己的layout，方法就是添加一个文件即可，同时你也可以编辑现有的layout，比如post的layout默认是hexo\scaffolds\post.md<br>date：博客建立的时间<br>comments：是否该博客下有评论，默认是true，前提是我们已经为自己的Hexo博客添加了评论系统(如多说评论)<br> categories：所要编辑博客的分类目录，可以为空<br> tags：文章标签，可为空，多标签请用格式[tag1，tag2，tag3]<br> keywords： 博客的关键字<br> description： 本博客的简短描述  </p>
 </blockquote>
-<p>当然，还有其它的一些可添加字段，本文只列出了一些常见的。更详细的，我们可以查看Hexo的官方资料。<br><em>注意：front-matter中每个字段名称的冒号后面要有空格，否则Hexo无法解析</em>。</p>
+<p>当然，还有其它的一些可添加字段，本文只列出了一些常见的。更详细的，我们可以查看Hexo的官方资料。<em>#注意：front-matter中每个字段名称的冒号后面要有空格，否则Hexo无法解析</em>。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="u5E38_u7528_u7B80_u5199_u547D_u4EE4"><a href="#u5E38_u7528_u7B80_u5199_u547D_u4EE4" class="headerlink" title="常用简写命令"></a>常用简写命令</h3><blockquote>
