@@ -4,44 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8B%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%8F%8A%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/</loc>
-    <lastmod>2016-02-16T13:36:13.652Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2016-02-16T13:36:13.652Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AF%BC%E5%85%A5%E4%B8%8E%E5%AF%BC%E5%87%BA/</loc>
-    <lastmod>2016-02-16T13:32:49.548Z</lastmod>
-    <data>
-        <display>
-        <title>Mysql数据库的导入与导出</title>
-        <pubTime>2016-02-16T12:54:46.000Z</pubTime>
-        
-        <tag>Mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="MySQL数据库开发" url="http://yoursite.com/categories/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
     <loc>http://yoursite.com/2016/02/09/Hexo%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2016-02-09T14:33:46.286Z</lastmod>
+    <lastmod>2016-02-16T13:43:25.896Z</lastmod>
     <data>
         <display>
         <title>Hexo使用常见问题汇总</title>
@@ -60,6 +24,47 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8B%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%8F%8A%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/</loc>
+    <lastmod>2016-02-16T13:39:52.666Z</lastmod>
+    <data>
+        <display>
+        <title>Mysql数据库之用户管理及密码修改</title>
+        <pubTime>2016-02-16T11:18:42.000Z</pubTime>
+        
+        <tag>Mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="MySQL数据库开发" url="http://yoursite.com/categories/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AF%BC%E5%85%A5%E4%B8%8E%E5%AF%BC%E5%87%BA/</loc>
+    <lastmod>2016-02-16T13:39:40.474Z</lastmod>
+    <data>
+        <display>
+        <title>Mysql数据库的导入与导出</title>
+        <pubTime>2016-02-16T12:54:46.000Z</pubTime>
+        
+        <tag>Mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="MySQL数据库开发" url="http://yoursite.com/categories/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://yoursite.com/2016/02/07/hexo%E8%AF%AD%E6%B3%95/</loc>

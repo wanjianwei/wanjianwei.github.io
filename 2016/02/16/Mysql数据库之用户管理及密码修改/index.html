@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Mysql," />
 
 
 
@@ -59,31 +59,43 @@
 
 
 
-<meta name="description" content="title: Mysql数据库之用户管理及密码修改date: 2016-02-16 19:18:42tags: Mysql   
-categories: MySQL数据库开发修改数据库用户密码：
+<meta name="description" content="修改数据库用户密码：
 如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     
 
-　$mysqladmin　-u　root　password　abcdef">
+　$mysqladmin　-u　root　password　abcdef   
+
+
+如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   
+
+　$mysqladmin　-u">
 <meta property="og:type" content="article">
-<meta property="og:title" content="万建伟's Blog">
+<meta property="og:title" content="Mysql数据库之用户管理及密码修改">
 <meta property="og:url" content="http://yoursite.com/2016/02/16/Mysql数据库之用户管理及密码修改/index.html">
 <meta property="og:site_name" content="万建伟's Blog">
-<meta property="og:description" content="title: Mysql数据库之用户管理及密码修改date: 2016-02-16 19:18:42tags: Mysql   
-categories: MySQL数据库开发修改数据库用户密码：
+<meta property="og:description" content="修改数据库用户密码：
 如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     
 
-　$mysqladmin　-u　root　password　abcdef">
+　$mysqladmin　-u　root　password　abcdef   
+
+
+如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   
+
+　$mysqladmin　-u">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E7%8A%B6%E6%80%81%E5%8F%98%E9%87%8F%E5%9B%BE.jpg">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E8%BF%9B%E7%A8%8B%E5%9B%BE.jpg">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F%E5%9B%BE.jpg">
-<meta property="og:updated_time" content="2016-02-16T13:36:13.652Z">
+<meta property="og:updated_time" content="2016-02-16T13:39:52.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="万建伟's Blog">
-<meta name="twitter:description" content="title: Mysql数据库之用户管理及密码修改date: 2016-02-16 19:18:42tags: Mysql   
-categories: MySQL数据库开发修改数据库用户密码：
+<meta name="twitter:title" content="Mysql数据库之用户管理及密码修改">
+<meta name="twitter:description" content="修改数据库用户密码：
 如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     
 
-　$mysqladmin　-u　root　password　abcdef">
+　$mysqladmin　-u　root　password　abcdef   
+
+
+如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   
+
+　$mysqladmin　-u">
 
 
 
@@ -101,7 +113,7 @@ categories: MySQL数据库开发修改数据库用户密码：
   };
 </script>
 
-  <title>  | 万建伟's Blog </title>
+  <title> Mysql数据库之用户管理及密码修改 | 万建伟's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +261,7 @@ categories: MySQL数据库开发修改数据库用户密码：
             
             
               
-                
+                Mysql数据库之用户管理及密码修改
               
             
           </h1>
@@ -261,11 +273,30 @@ categories: MySQL数据库开发修改数据库用户密码：
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-16T21:36:13+08:00" content="2016-02-16">
+            <time itemprop="dateCreated" datetime="2016-02-16T19:18:42+08:00" content="2016-02-16">
               2016-02-16
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL数据库开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -294,9 +325,7 @@ categories: MySQL数据库开发修改数据库用户密码：
       
 
       
-        <hr>
-<p>title: Mysql数据库之用户管理及密码修改<br>date: 2016-02-16 19:18:42<br>tags: Mysql   </p>
-<h2 id="categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1"><a href="#categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1" class="headerlink" title="categories: MySQL数据库开发"></a>categories: MySQL数据库开发</h2><h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
+        <h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
 <li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
 <blockquote>
 <p>　$mysqladmin　-u　root　password　abcdef   </p>
@@ -379,18 +408,28 @@ categories: MySQL数据库开发修改数据库用户密码：
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Mysql/" rel="tag">#Mysql</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/16/Mysql数据库的导入与导出/" rel="next" title="Mysql数据库的导入与导出">
-                <i class="fa fa-chevron-left"></i> Mysql数据库的导入与导出
+              <a href="/2016/02/09/Hexo使用常见问题汇总/" rel="next" title="Hexo使用常见问题汇总">
+                <i class="fa fa-chevron-left"></i> Hexo使用常见问题汇总
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/16/Mysql数据库的导入与导出/" rel="prev" title="Mysql数据库的导入与导出">
+                Mysql数据库的导入与导出 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -406,7 +445,7 @@ categories: MySQL数据库开发修改数据库用户密码：
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2016/02/16/Mysql数据库之用户管理及密码修改/"
-     data-title=""
+     data-title="Mysql数据库之用户管理及密码修改"
      data-content=""
      data-url="http://yoursite.com/2016/02/16/Mysql数据库之用户管理及密码修改/">
   <div class="ds-share-inline">
@@ -431,12 +470,15 @@ categories: MySQL数据库开发修改数据库用户密码：
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/02/16/Mysql数据库之用户管理及密码修改/"
-           data-title="" data-url="http://yoursite.com/2016/02/16/Mysql数据库之用户管理及密码修改/">
+           data-title="Mysql数据库之用户管理及密码修改" data-url="http://yoursite.com/2016/02/16/Mysql数据库之用户管理及密码修改/">
       </div>
     
   </div>
@@ -575,7 +617,7 @@ categories: MySQL数据库开发修改数据库用户密码：
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1"><span class="nav-number">1.</span> <span class="nav-text">categories: MySQL数据库开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><span class="nav-number">1.1.</span> <span class="nav-text">修改数据库用户密码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6DFB_u52A0_u6570_u636E_u5E93_u7528_u6237"><span class="nav-number">1.2.</span> <span class="nav-text">添加数据库用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5220_u9664_u6570_u636E_u5E93_u7528_u6237"><span class="nav-number">1.3.</span> <span class="nav-text">删除数据库用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u5E93_u7BA1_u7406_u64CD_u4F5C"><span class="nav-number">1.4.</span> <span class="nav-text">数据库管理操作</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><span class="nav-number">1.</span> <span class="nav-text">修改数据库用户密码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6DFB_u52A0_u6570_u636E_u5E93_u7528_u6237"><span class="nav-number">2.</span> <span class="nav-text">添加数据库用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5220_u9664_u6570_u636E_u5E93_u7528_u6237"><span class="nav-number">3.</span> <span class="nav-text">删除数据库用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u5E93_u7BA1_u7406_u64CD_u4F5C"><span class="nav-number">4.</span> <span class="nav-text">数据库管理操作</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

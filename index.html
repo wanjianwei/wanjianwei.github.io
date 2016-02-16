@@ -251,114 +251,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-16T21:36:13+08:00" content="2016-02-16">
-              2016-02-16
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/16/Mysql数据库之用户管理及密码修改/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-<p>title: Mysql数据库之用户管理及密码修改<br>date: 2016-02-16 19:18:42<br>tags: Mysql   </p>
-<h2 id="categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1"><a href="#categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1" class="headerlink" title="categories: MySQL数据库开发"></a>categories: MySQL数据库开发</h2><h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
-<li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
-<blockquote>
-<p>　$mysqladmin　-u　root　password　abcdef   </p>
-</blockquote>
-</li>
-<li><p>如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   </p>
-<blockquote>
-<p>　$mysqladmin　-uroot　-pabcdef　password　123456   </p>
-</blockquote>
-</li>
-<li><p>直接使用SET　PASSWORD语句修改或设置指定用户的密码，命令格式如下所示(需要先登录mysql服务器,但无需使用FLUSH PRIVILEGES)：   </p>
-<blockquote>
-<p>　mysql&gt;SET　PASSWORD　FOR　wjw@’%’　=　PASSWORD(‘123456’)；  </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/16/Mysql数据库之用户管理及密码修改/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/02/16/Mysql数据库的导入与导出/" itemprop="url">
                   Mysql数据库的导入与导出
                 </a>
@@ -431,7 +323,7 @@
 <li>一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
 </ul>
 <blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/putfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
+<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/ｏputfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
 </blockquote>
 <ul>
 <li>二、导出某个表，命令格式如下：</li>
@@ -441,6 +333,131 @@
 </blockquote>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/02/16/Mysql数据库的导入与导出/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="url">
+                  Mysql数据库之用户管理及密码修改
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-16T19:18:42+08:00" content="2016-02-16">
+              2016-02-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL数据库开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/16/Mysql数据库之用户管理及密码修改/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
+<li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
+<blockquote>
+<p>　$mysqladmin　-u　root　password　abcdef   </p>
+</blockquote>
+</li>
+<li><p>如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   </p>
+<blockquote>
+<p>　$mysqladmin　-uroot　-pabcdef　password　123456   </p>
+</blockquote>
+</li>
+<li><p>直接使用SET　PASSWORD语句修改或设置指定用户的密码，命令格式如下所示(需要先登录mysql服务器,但无需使用FLUSH PRIVILEGES)：   </p>
+<blockquote>
+<p>　mysql&gt;SET　PASSWORD　FOR　wjw@’%’　=　PASSWORD(‘123456’)；  </p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/16/Mysql数据库之用户管理及密码修改/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

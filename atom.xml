@@ -4,7 +4,7 @@
   <subtitle><![CDATA[从心所愿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-16T13:36:13.652Z</updated>
+  <updated>2016-02-16T13:39:40.474Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,14 +15,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title><![CDATA[Mysql数据库的导入与导出]]></title>
+    <link href="http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AF%BC%E5%85%A5%E4%B8%8E%E5%AF%BC%E5%87%BA/"/>
+    <id>http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/</id>
+    <published>2016-02-16T12:54:46.000Z</published>
+    <updated>2016-02-16T13:39:40.474Z</updated>
+    <content type="html"><![CDATA[<h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
+<ul>
+<li>一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
+</ul>
+<blockquote>
+<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/ｏputfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
+</blockquote>
+<ul>
+<li>二、导出某个表，命令格式如下：</li>
+</ul>
+<blockquote>
+<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>　参数解释如上所示；<br>　eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
+</blockquote>
+<a id="more"></a>
+<h3 id="u6570_u636E_u5E93_u7684_u5BFC_u5165"><a href="#u6570_u636E_u5E93_u7684_u5BFC_u5165" class="headerlink" title="数据库的导入"></a>数据库的导入</h3><p><strong>数据库的导入要先登录MySQL服务器，常用source命令，步骤如下所示</strong>   </p>
+<ul>
+<li><p>先登录MySQL服务器   </p>
+<blockquote>
+<p>　mysql　-h120.23.123.212　-uwjw　-pwjw<br>　这是本地直接登录远程数据库，也可以利用putty等ssh工具登录；</p>
+</blockquote>
+</li>
+<li><p>选定要导入数据的数据库</p>
+<blockquote>
+<p>　mysql&gt;use　database1;   </p>
+</blockquote>
+</li>
+<li><p>使用source命令导入本地的sql文件</p>
+</li>
+</ul>
+<blockquote>
+<p>　mysql&gt;source　/home/wanjianwei/database1.sql；</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
+<ul>
+<li>一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
+</ul>
+<blockquote>
+<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/ｏputfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
+</blockquote>
+<ul>
+<li>二、导出某个表，命令格式如下：</li>
+</ul>
+<blockquote>
+<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>　参数解释如上所示；<br>　eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="Mysql" scheme="http://yoursite.com/tags/Mysql/"/>
+    
+      <category term="MySQL数据库开发" scheme="http://yoursite.com/categories/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mysql数据库之用户管理及密码修改]]></title>
     <link href="http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8B%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%8F%8A%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/"/>
     <id>http://yoursite.com/2016/02/16/Mysql数据库之用户管理及密码修改/</id>
-    <published>2016-02-16T13:36:13.652Z</published>
-    <updated>2016-02-16T13:36:13.652Z</updated>
-    <content type="html"><![CDATA[<hr>
-<p>title: Mysql数据库之用户管理及密码修改<br>date: 2016-02-16 19:18:42<br>tags: Mysql   </p>
-<h2 id="categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1"><a href="#categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1" class="headerlink" title="categories: MySQL数据库开发"></a>categories: MySQL数据库开发</h2><h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
+    <published>2016-02-16T11:18:42.000Z</published>
+    <updated>2016-02-16T13:39:52.666Z</updated>
+    <content type="html"><![CDATA[<h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
 <li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
 <blockquote>
 <p>　$mysqladmin　-u　root　password　abcdef   </p>
@@ -101,9 +161,7 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<hr>
-<p>title: Mysql数据库之用户管理及密码修改<br>date: 2016-02-16 19:18:42<br>tags: Mysql   </p>
-<h2 id="categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1"><a href="#categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1" class="headerlink" title="categories: MySQL数据库开发"></a>categories: MySQL数据库开发</h2><h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
+    <![CDATA[<h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
 <li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
 <blockquote>
 <p>　$mysqladmin　-u　root　password　abcdef   </p>
@@ -120,64 +178,6 @@
     
     </summary>
     
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Mysql数据库的导入与导出]]></title>
-    <link href="http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AF%BC%E5%85%A5%E4%B8%8E%E5%AF%BC%E5%87%BA/"/>
-    <id>http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/</id>
-    <published>2016-02-16T12:54:46.000Z</published>
-    <updated>2016-02-16T13:32:49.548Z</updated>
-    <content type="html"><![CDATA[<h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
-<ul>
-<li>一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
-</ul>
-<blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/putfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
-</blockquote>
-<ul>
-<li>二、导出某个表，命令格式如下：</li>
-</ul>
-<blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>　参数解释如上所示；<br>　eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
-</blockquote>
-<a id="more"></a>
-<h3 id="u6570_u636E_u5E93_u7684_u5BFC_u5165"><a href="#u6570_u636E_u5E93_u7684_u5BFC_u5165" class="headerlink" title="数据库的导入"></a>数据库的导入</h3><p><strong>数据库的导入要先登录MySQL服务器，常用source命令，步骤如下所示</strong>   </p>
-<ul>
-<li><p>先登录MySQL服务器   </p>
-<blockquote>
-<p>　mysql　-h120.23.123.212　-uwjw　-pwjw<br>　这是本地直接登录远程数据库，也可以利用putty等ssh工具登录；</p>
-</blockquote>
-</li>
-<li><p>选定要导入数据的数据库</p>
-<blockquote>
-<p>　mysql&gt;use　database1;   </p>
-</blockquote>
-</li>
-<li><p>使用source命令导入本地的sql文件</p>
-</li>
-</ul>
-<blockquote>
-<p>　mysql&gt;source　/home/wanjianwei/database1.sql；</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
-<ul>
-<li>一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
-</ul>
-<blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/putfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
-</blockquote>
-<ul>
-<li>二、导出某个表，命令格式如下：</li>
-</ul>
-<blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>　参数解释如上所示；<br>　eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
-</blockquote>]]>
-    
-    </summary>
-    
       <category term="Mysql" scheme="http://yoursite.com/tags/Mysql/"/>
     
       <category term="MySQL数据库开发" scheme="http://yoursite.com/categories/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
@@ -189,7 +189,7 @@
     <link href="http://yoursite.com/2016/02/09/Hexo%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
     <id>http://yoursite.com/2016/02/09/Hexo使用常见问题汇总/</id>
     <published>2016-02-09T13:40:58.000Z</published>
-    <updated>2016-02-09T14:33:46.286Z</updated>
+    <updated>2016-02-16T13:43:25.896Z</updated>
     <content type="html"><![CDATA[<ul>
 <li>一、使用Next主题时，Hexo博客的首页只显示一篇文章</li>
 </ul>
@@ -198,7 +198,7 @@
 <p>如上所示，使用“hexo　clean”指令清楚缓存后，使用“hexo　g”命令重复渲染两次就能正常显示了；  </p>
 </blockquote>
 <ul>
-<li><p>二、使用“hexo　n　“filename””生成新的md文件后，若想要编辑文章的front-matter，注意front-matter必须在“—”换行符之间，而且不能和“—”换行符之间有空行，否则Hexo无法解析；  </p>
+<li><p>二、使用“hexo　n　“filename””生成新的md文件后，若想要编辑文章的front-matter，注意front-matter必须在“—”限定符之间，而且首尾字段不能和“—”换行符之间有空行，另外“—”要置于行首，末尾不能有空格，否则都会造成Hexo解析错误；  </p>
 </li>
 <li><p>三、Hexo中使用markdown语法编辑博客，必须按照严格的markdown语法，比如解析“#”标题，最后一个“#”后必须加空格，才能在Hexo中正确显示，而这也是markdown推荐的写法，实际上有些情况下，不加空格也可以解析，只是Hexo中不允许；  </p>
 </li>
