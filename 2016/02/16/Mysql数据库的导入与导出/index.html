@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="Mysql," />
 
 
 
@@ -59,21 +59,31 @@
 
 
 
-<meta name="description" content="步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是g">
+<meta name="description" content="数据库导出数据库的导出无需登录MySQL服务器 
+
+导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   
+
+
+$mysqldump　-h serverIp　-u username　-p password　数据库名 &amp;gt; 目录/putfile_name.sqlh参数表示远程服务器地址，若导出的是本地数据库，可不添加；u参数表示用户名；p参数表示用户密码；">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo+github搭建个人博客教程">
-<meta property="og:url" content="http://yoursite.com/2016/02/03/hexo-note/index.html">
+<meta property="og:title" content="Mysql数据库的导入与导出">
+<meta property="og:url" content="http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/index.html">
 <meta property="og:site_name" content="万建伟's Blog">
-<meta property="og:description" content="步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是g">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/hexo2.jpg">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/hexo3.jpg">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/hexo4.jpg">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/hexo5.jpg">
-<meta property="og:updated_time" content="2016-02-07T07:19:51.034Z">
+<meta property="og:description" content="数据库导出数据库的导出无需登录MySQL服务器 
+
+导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   
+
+
+$mysqldump　-h serverIp　-u username　-p password　数据库名 &amp;gt; 目录/putfile_name.sqlh参数表示远程服务器地址，若导出的是本地数据库，可不添加；u参数表示用户名；p参数表示用户密码；">
+<meta property="og:updated_time" content="2016-02-16T13:27:22.366Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo+github搭建个人博客教程">
-<meta name="twitter:description" content="步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是g">
+<meta name="twitter:title" content="Mysql数据库的导入与导出">
+<meta name="twitter:description" content="数据库导出数据库的导出无需登录MySQL服务器 
+
+导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   
+
+
+$mysqldump　-h serverIp　-u username　-p password　数据库名 &amp;gt; 目录/putfile_name.sqlh参数表示远程服务器地址，若导出的是本地数据库，可不添加；u参数表示用户名；p参数表示用户密码；">
 
 
 
@@ -91,7 +101,7 @@
   };
 </script>
 
-  <title> Hexo+github搭建个人博客教程 | 万建伟's Blog </title>
+  <title> Mysql数据库的导入与导出 | 万建伟's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +249,7 @@
             
             
               
-                Hexo+github搭建个人博客教程
+                Mysql数据库的导入与导出
               
             
           </h1>
@@ -251,8 +261,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-03T16:15:27+08:00" content="2016-02-03">
-              2016-02-03
+            <time itemprop="dateCreated" datetime="2016-02-16T20:54:46+08:00" content="2016-02-16">
+              2016-02-16
             </time>
           </span>
 
@@ -265,8 +275,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
+                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL数据库开发</span>
                   </a>
                 </span>
 
@@ -281,8 +291,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/03/hexo-note/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/03/hexo-note/" itemprop="commentsCount"></span>
+                <a href="/2016/02/16/Mysql数据库的导入与导出/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/Mysql数据库的导入与导出/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -303,83 +313,37 @@
       
 
       
-        <p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
-</blockquote>
-<a id="more"></a>
-<h3 id="u5B89_u88C5_u6B65_u9AA4"><a href="#u5B89_u88C5_u6B65_u9AA4" class="headerlink" title="安装步骤"></a>安装步骤</h3><ul>
-<li>一、下载并安装<a href="http://git-scm.com/download/" target="_blank" rel="external">Git</a>  </li>
-<li>二、下载并安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li>三、在上述安装完成后，在window下打开cmd，输入如下命令，利用npm命令安装hexo  </li>
+        <h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
+<ul>
+<li>导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
 </ul>
 <blockquote>
-<p>npm install -g hexo</p>
+<p>$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/putfile_name.sql<br>h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>u参数表示用户名；<br>p参数表示用户密码；<br>eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
 </blockquote>
 <ul>
-<li>四、安装完成后，选择某个盘符下建立一个文件夹（比如在D盘建立一个文件夹，命名为HEXO）用来存放建立个人博客所需要的所有文件，并进入该文件夹，在任意位置单击鼠标右键，选择“Git　Bash　here”，打开Git　bash，输入“hexo　init”，来初始化文件夹，成功后，重新进入文件夹，会发现里面已经有文件填充了。</li>
+<li>导出某个表，命令格式如下：</li>
 </ul>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo2.jpg" alt="wenjainjia">  </p>
+<p>$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>参数解释如上所示；<br>eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
+</blockquote>
+<h3 id="u6570_u636E_u5E93_u7684_u5BFC_u5165"><a href="#u6570_u636E_u5E93_u7684_u5BFC_u5165" class="headerlink" title="数据库的导入"></a>数据库的导入</h3><p><strong>数据库的导入要先登录MySQL服务器，常用source命令，步骤如下所示</strong>   </p>
 <ul>
-<li>deploy_git：执行hexo　deploy命令部署到Github上的内容目录</li>
-<li>public：执行hexo　generate命令，输出的静态网页内容目录</li>
-<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
-<li>scripts：扩展脚本目录，这里可以自定义一些JavaScript脚本</li>
-<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。  <blockquote>
-<ul>
-<li>_drafts：存储草稿文章的目录  </li>
-<li>_posts：存储发布文章的目录</li>
-</ul>
+<li><p>先登录MySQL服务器   </p>
+<blockquote>
+<p>mysql　-h120.23.123.212　-uwjw　-pwjw<br>这是本地直接登录远程数据库，也可以利用putty等ssh工具登录；</p>
 </blockquote>
 </li>
+<li><p>选定要导入数据的数据库</p>
+<blockquote>
+<p>mysql&gt;use　database1;   </p>
+</blockquote>
+</li>
+<li><p>使用source命令导入本地的sql文件</p>
+</li>
 </ul>
-<ul>
-<li>themes：主题文件目录</li>
-<li>_config.yml：全局配置文件</li>
-<li>package.json：应用程序数据，指明hexo的版本等信息  </li>
-</ul>
-</blockquote>
-<ul>
-<li>五、登录自己的github账号（没有的可<a href="https://github.com/" target="_blank" rel="external">在此</a>注册），新建一个repository，并用自己的账号名来命名。比如我的github账号为wanjianwei，则我刚刚建立的repository名字应该是wanjianwei.github.io  </li>
-</ul>
-<h3 id="u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A"><a href="#u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A" class="headerlink" title="与github pages进行绑定"></a>与github pages进行绑定</h3><p>　　在完成以上安装步骤后，我们事实上已经在本地搭建了一个简单的hexo博客站点，进入存放hexo相关文件的文件夹，点击鼠标右键-&gt;”Git Bash here”,分别输入以下命令后，即可打开浏览器，访问“<a href="http://localhost:4000”" target="_blank" rel="external">http://localhost:4000”</a>  即可打开hexo的Hello　World界面</p>
 <blockquote>
-<p>hexo　generate;<br>hexo server</p>
+<p>mysql&gt;source　/home/wanjianwei/database1.sql；</p>
 </blockquote>
-<p>只不过此事的hexo静态博客只能在本地访问，为了可以让其他人通过网络访问我们的博客，我们必须将hexo静态博客发布到云空间上，在此我选择的是github。我们进入存放hexo相关文件的文件夹类，打开站点配置文件_config.yml，按下图所示进行配置</p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo3.jpg" alt="hexo_config.yml"></p>
-</blockquote>
-<p>上述的repository要换成自己新建的repository的url，配置完成后，我们即可通过指令将我们在本地生成的hexo静态博客推送到github上了。接下来，我们需要先熟悉下hexo的一些常用<a href="http://www.tuicool.com/articles/yUreInQ" target="_blank" rel="external">指令</a></p>
-<h3 id="u914D_u7F6EHexo_u4E3B_u9898"><a href="#u914D_u7F6EHexo_u4E3B_u9898" class="headerlink" title="配置Hexo主题"></a>配置Hexo主题</h3><p>　　hexo默认自带的主题外观如果无法满足我们的需求，我们可以在github上搜索符合我们需求的主题，在此推荐<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">hexo-theme-next</a>,安装方法和配置方法在其官网上都有详细描述（<a href="http://theme-next.iissnan.com/five-minutes-setup.html" target="_blank" rel="external">点击查看</a>）。  </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo4.jpg" alt="安装教程截图"></p>
-</blockquote>
-<p>它自带有三种布局主题分别为Muse，Mist，Pisces；楼主采用的是Pisces，效果在上文中已展示。需要注意的是第三方服务的安装，比如评论，统计博客浏览情况，这其实也不复杂，在Hexo的官网上也有专门的介绍(<a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">点击查看</a>)。<br>　　在完成上述步骤后，我们就基本为自己搭建了一个独立的个人博客网站，当然，一开始我们会觉得有些不完美，但随着使用的深入，我们都能找到相应解决的方法，逐渐把它改进成自己想要的样子。在改进完善的过程中，往往需要下载一些插件，这里提供一个集合了几乎所有hexo第三方插件的地址，大家如果有需要可以按需要下载<a href="https://hexo.io/plugins/" target="_blank" rel="external">点击前往&gt;&gt;</a>；</p>
-<h3 id="u57DF_u540D_u7ED1_u5B9A"><a href="#u57DF_u540D_u7ED1_u5B9A" class="headerlink" title="域名绑定"></a>域名绑定</h3><p>　　当我们将本地的hexo静态博客push到github上建立的repository时，github自动给我们分配了一个二级域名：username.github.io,其中username即是我们的账户名。我们可以通过这个域名访问我们push的Hexo博客，如果我们希望用一个新的，个人所属的域名来替换它，来增加自己的品牌效应时，步骤也非常简单。<br>　　我们可以直接在github上存放Hexo静态博客的repository中增加一个CNAME文件（注意一定要CNAME一定要大写），将自己的个人域名写入保存就行。但这样的缺点是本地每次往repository上push，CNAME都会消失，必须重新添加并编辑；<br>　　另一种方法是本地安装hexo-generator-cname插件，安装方法是进入存放Hexo相关文件的目录，打开Git Bash，输入以下命令：</p>
-<blockquote>
-<p>npm install hexo-generator-cname –save</p>
-</blockquote>
-<p>并在站点配置文件_config.yml中的Plugins字段中增加- hexo-generator-cname，如下图所示</p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo5.jpg" alt="cname"></p>
-</blockquote>
-<p>从此，每次本地编辑完博客后执行“hexo　g”命令，都会在public目录中生成一个CNAME文件，我们只需打开，并写入自己的个人域名，保存后再执行“hexo　ｄ”命令。该方法也有一个问题，就是每次执行“hexo　ｇ”命令后，publish文件夹中都会重新生成一个CNAME文件，我们需要重复编辑个人的域名并保存，才能执行“hexo　ｄ”;  </p>
-<h3 id="u7F16_u5199_u535A_u5BA2"><a href="#u7F16_u5199_u535A_u5BA2" class="headerlink" title="编写博客"></a>编写博客</h3><p>　　Hexo 采用markdown编写博客，进入存放Hexo相关文件的目录，打开“Git　Bash”，输入如下命令  </p>
-<blockquote>
-<p>hexo new post “filename”  </p>
-</blockquote>
-<p>便会在./source/_post目录下生成一个md文件，利用markdown书写软件打开，便可开始编辑自己的博客了，保存后依次输入以下命令，即可push到github。  </p>
-<blockquote>
-<p>hexo clean<br>hexo g<br>hexo d  </p>
-</blockquote>
-<p>如果想在本地先预览下，可以依次输入如下命令，然后打开浏览器，访问“<a href="http://localhost:4000”" target="_blank" rel="external">http://localhost:4000”</a>  </p>
-<blockquote>
-<p>hexo g<br>hexo server</p>
-</blockquote>
-<p>markdown书写软件推荐window系统下我使用的是markdowmPad 2；markdown的语法也较简单，可参考这篇<a href="http://foreverwan.vicp.net/2016/02/03/markdown-note/" target="_blank" rel="external">博文</a></p>
-<h3 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h3><p>　　一些东西在我们看来很难，其实是因为我们对它不够了解，就拿搭建这个个人博客来说，网上有许多不同的实现方法，但如果我们只停留在阅读教程而不是去亲手实践，是无法体会到学习一门新技术的快乐的。重要的还是我们要有一个敢于挑战的心，一种Geek的精神，敢于钻研，就一定会有所收获的。</p>
 
       
     </div>
@@ -388,7 +352,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/Mysql/" rel="tag">#Mysql</a>
           
         </div>
       
@@ -397,13 +361,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/02/16/Mysql数据库之用户管理及密码修改/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/03/markdown-note/" rel="prev" title="markdown语法教程">
-                markdown语法教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -418,10 +382,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/03/hexo-note/"
-     data-title="Hexo+github搭建个人博客教程"
+        <div class="ds-share flat" data-thread-key="2016/02/16/Mysql数据库的导入与导出/"
+     data-title="Mysql数据库的导入与导出"
      data-content=""
-     data-url="http://yoursite.com/2016/02/03/hexo-note/">
+     data-url="http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -451,8 +415,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/03/hexo-note/"
-           data-title="Hexo+github搭建个人博客教程" data-url="http://yoursite.com/2016/02/03/hexo-note/">
+      <div class="ds-thread" data-thread-key="2016/02/16/Mysql数据库的导入与导出/"
+           data-title="Mysql数据库的导入与导出" data-url="http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/">
       </div>
     
   </div>
@@ -591,7 +555,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B89_u88C5_u6B65_u9AA4"><span class="nav-number">1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A"><span class="nav-number">2.</span> <span class="nav-text">与github pages进行绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u914D_u7F6EHexo_u4E3B_u9898"><span class="nav-number">3.</span> <span class="nav-text">配置Hexo主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u57DF_u540D_u7ED1_u5B9A"><span class="nav-number">4.</span> <span class="nav-text">域名绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7F16_u5199_u535A_u5BA2"><span class="nav-number">5.</span> <span class="nav-text">编写博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u603B_u7ED3"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u5E93_u5BFC_u51FA"><span class="nav-number">1.</span> <span class="nav-text">数据库导出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u5E93_u7684_u5BFC_u5165"><span class="nav-number">2.</span> <span class="nav-text">数据库的导入</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

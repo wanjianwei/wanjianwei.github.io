@@ -4,7 +4,7 @@
   <subtitle><![CDATA[从心所愿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-09T14:33:46.286Z</updated>
+  <updated>2016-02-16T13:27:22.366Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,162 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Mysql数据库的导入与导出]]></title>
+    <link href="http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AF%BC%E5%85%A5%E4%B8%8E%E5%AF%BC%E5%87%BA/"/>
+    <id>http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/</id>
+    <published>2016-02-16T12:54:46.000Z</published>
+    <updated>2016-02-16T13:27:22.366Z</updated>
+    <content type="html"><![CDATA[<h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
+<ul>
+<li>导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
+</ul>
+<blockquote>
+<p>$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/putfile_name.sql<br>h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>u参数表示用户名；<br>p参数表示用户密码；<br>eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
+</blockquote>
+<ul>
+<li>导出某个表，命令格式如下：</li>
+</ul>
+<blockquote>
+<p>$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>参数解释如上所示；<br>eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
+</blockquote>
+<h3 id="u6570_u636E_u5E93_u7684_u5BFC_u5165"><a href="#u6570_u636E_u5E93_u7684_u5BFC_u5165" class="headerlink" title="数据库的导入"></a>数据库的导入</h3><p><strong>数据库的导入要先登录MySQL服务器，常用source命令，步骤如下所示</strong>   </p>
+<ul>
+<li><p>先登录MySQL服务器   </p>
+<blockquote>
+<p>mysql　-h120.23.123.212　-uwjw　-pwjw<br>这是本地直接登录远程数据库，也可以利用putty等ssh工具登录；</p>
+</blockquote>
+</li>
+<li><p>选定要导入数据的数据库</p>
+<blockquote>
+<p>mysql&gt;use　database1;   </p>
+</blockquote>
+</li>
+<li><p>使用source命令导入本地的sql文件</p>
+</li>
+</ul>
+<blockquote>
+<p>mysql&gt;source　/home/wanjianwei/database1.sql；</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据]]>
+    </summary>
+    
+      <category term="Mysql" scheme="http://yoursite.com/tags/Mysql/"/>
+    
+      <category term="MySQL数据库开发" scheme="http://yoursite.com/categories/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2016/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8B%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%8F%8A%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/"/>
+    <id>http://yoursite.com/2016/02/16/Mysql数据库之用户管理及密码修改/</id>
+    <published>2016-02-16T12:51:54.755Z</published>
+    <updated>2016-02-16T12:50:50.982Z</updated>
+    <content type="html"><![CDATA[<hr>
+<p>title: Mysql数据库之用户管理及密码修改<br>date: 2016-02-16 19:18:42<br>tags: Mysql   </p>
+<h2 id="categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1"><a href="#categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1" class="headerlink" title="categories: MySQL数据库开发"></a>categories: MySQL数据库开发</h2><h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
+<li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
+<blockquote>
+<p>$ mysqladmin　-u　root　password　abcdef   </p>
+</blockquote>
+</li>
+<li><p>如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   </p>
+<blockquote>
+<p>$ mysqladmin　-uroot　-pabcdef　password　123456   </p>
+</blockquote>
+</li>
+<li><p>直接使用SET　PASSWORD语句修改或设置指定用户的密码，命令格式如下所示(需要先登录mysql服务器,但无需使用FLUSH PRIVILEGES)：   </p>
+<blockquote>
+<p>mysql&gt;SET　PASSWORD　FOR　wjw@’%’　=　PASSWORD(‘123456’)；  </p>
+<a id="more"></a> 
+<h3 id="u6DFB_u52A0_u6570_u636E_u5E93_u7528_u6237"><a href="#u6DFB_u52A0_u6570_u636E_u5E93_u7528_u6237" class="headerlink" title="添加数据库用户"></a>添加数据库用户</h3></blockquote>
+</li>
+<li><p>操作mysql.user表，直接在其中插入一个用户信息，需要使用FLUSH PRIVILEGES，使操作生效，命令格式如下：   </p>
+<blockquote>
+<p>mysql&gt;INSERT　INTO　mysql.user(Host,User,Password)　VALUES(‘%’,’wjw’,PASSWORD(‘123456’))；<br>mysql&gt;FLUSH　PRIVILEGES；　　　</p>
+</blockquote>
+</li>
+<li><p>使用GRANT … IDENTIFIED BY权限管理语句，命令格式如下所示：</p>
+<blockquote>
+<p>mysql&gt;GRANT　USAGE　ON　＊．＊　TO　wjw@’%’　IDENTIFIED　BY　‘123456’；   </p>
+</blockquote>
+</li>
+</ul>
+<p>　这时无需采用PASSWORD（）函数对密码加密，该语句自动采用该函数对设置的密码进行加密。另外也不必使用FLUSH PRIVILEGES语句使添加的用户生效；   </p>
+<h3 id="u5220_u9664_u6570_u636E_u5E93_u7528_u6237"><a href="#u5220_u9664_u6570_u636E_u5E93_u7528_u6237" class="headerlink" title="删除数据库用户"></a>删除数据库用户</h3><ul>
+<li>直接操作mysql.user表，从中删除指定的用户，并且FLUSH　PRIVILEGES使操作生效，命令格式如下：</li>
+</ul>
+<blockquote>
+<p>mysql&gt;DELETE　FROM　mysql.user　WHERE　User =　‘wjw’；<br>mysql&gt;FLUSH　PRIVILEGES；   </p>
+</blockquote>
+<h3 id="u6570_u636E_u5E93_u7BA1_u7406_u64CD_u4F5C"><a href="#u6570_u636E_u5E93_u7BA1_u7406_u64CD_u4F5C" class="headerlink" title="数据库管理操作"></a>数据库管理操作</h3><ul>
+<li>查看MySQL的安装版本 (无需登录先MySQL服务器)  </li>
+</ul>
+<blockquote>
+<p>$mysqladmin -uroot -p123456 version   </p>
+</blockquote>
+<ul>
+<li>查看MySQL当前状态   </li>
+</ul>
+<blockquote>
+<p>$mysqladmin -uroot -p123456 status   </p>
+</blockquote>
+<ul>
+<li>更新或重载privilege表或者grants表</li>
+</ul>
+<blockquote>
+<p>$mysqladmin -uroot -p123456 reload<br>$mysqladmin -uroot -p123456 refresh   </p>
+</blockquote>
+<ul>
+<li>关闭MySQL服务器的安全方法</li>
+</ul>
+<blockquote>
+<p>mysqladmin -uroot -p123456 shutdown   </p>
+</blockquote>
+<ul>
+<li>查看所有的MySQL服务器状态变量及其当前值   </li>
+</ul>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E7%8A%B6%E6%80%81%E5%8F%98%E9%87%8F%E5%9B%BE.jpg" alt="状态变量图">  </p>
+</blockquote>
+<ul>
+<li>显示mysql数据库当前正在进行的所有查询操作或进程</li>
+</ul>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E8%BF%9B%E7%A8%8B%E5%9B%BE.jpg" alt="进程图">   </p>
+</blockquote>
+<ul>
+<li>显示mysql服务器当前的系统变量及其值  </li>
+</ul>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F%E5%9B%BE.jpg" alt="系统变量"></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<hr>
+<p>title: Mysql数据库之用户管理及密码修改<br>date: 2016-02-16 19:18:42<br>tags: Mysql   </p>
+<h2 id="categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1"><a href="#categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1" class="headerlink" title="categories: MySQL数据库开发"></a>categories: MySQL数据库开发</h2><h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
+<li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
+<blockquote>
+<p>$ mysqladmin　-u　root　password　abcdef   </p>
+</blockquote>
+</li>
+<li><p>如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   </p>
+<blockquote>
+<p>$ mysqladmin　-uroot　-pabcdef　password　123456   </p>
+</blockquote>
+</li>
+<li><p>直接使用SET　PASSWORD语句修改或设置指定用户的密码，命令格式如下所示(需要先登录mysql服务器,但无需使用FLUSH PRIVILEGES)：   </p>
+<blockquote>
+<p>mysql&gt;SET　PASSWORD　FOR　wjw@’%’　=　PASSWORD(‘123456’)；  </p>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hexo使用常见问题汇总]]></title>
