@@ -63,7 +63,7 @@
 categories: MySQL数据库开发修改数据库用户密码：
 如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     
 
-$ mysqladmin　-u　root　password　abcdef">
+　$mysqladmin　-u　root　password　abcdef">
 <meta property="og:type" content="article">
 <meta property="og:title" content="万建伟's Blog">
 <meta property="og:url" content="http://yoursite.com/2016/02/16/Mysql数据库之用户管理及密码修改/index.html">
@@ -72,18 +72,18 @@ $ mysqladmin　-u　root　password　abcdef">
 categories: MySQL数据库开发修改数据库用户密码：
 如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     
 
-$ mysqladmin　-u　root　password　abcdef">
+　$mysqladmin　-u　root　password　abcdef">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E7%8A%B6%E6%80%81%E5%8F%98%E9%87%8F%E5%9B%BE.jpg">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E8%BF%9B%E7%A8%8B%E5%9B%BE.jpg">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F%E5%9B%BE.jpg">
-<meta property="og:updated_time" content="2016-02-16T12:50:50.982Z">
+<meta property="og:updated_time" content="2016-02-16T13:36:13.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="万建伟's Blog">
 <meta name="twitter:description" content="title: Mysql数据库之用户管理及密码修改date: 2016-02-16 19:18:42tags: Mysql   
 categories: MySQL数据库开发修改数据库用户密码：
 如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     
 
-$ mysqladmin　-u　root　password　abcdef">
+　$mysqladmin　-u　root　password　abcdef">
 
 
 
@@ -261,7 +261,7 @@ $ mysqladmin　-u　root　password　abcdef">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-16T20:51:54+08:00" content="2016-02-16">
+            <time itemprop="dateCreated" datetime="2016-02-16T21:36:13+08:00" content="2016-02-16">
               2016-02-16
             </time>
           </span>
@@ -299,28 +299,28 @@ $ mysqladmin　-u　root　password　abcdef">
 <h2 id="categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1"><a href="#categories_3A_MySQL_u6570_u636E_u5E93_u5F00_u53D1" class="headerlink" title="categories: MySQL数据库开发"></a>categories: MySQL数据库开发</h2><h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
 <li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
 <blockquote>
-<p>$ mysqladmin　-u　root　password　abcdef   </p>
+<p>　$mysqladmin　-u　root　password　abcdef   </p>
 </blockquote>
 </li>
 <li><p>如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   </p>
 <blockquote>
-<p>$ mysqladmin　-uroot　-pabcdef　password　123456   </p>
+<p>　$mysqladmin　-uroot　-pabcdef　password　123456   </p>
 </blockquote>
 </li>
 <li><p>直接使用SET　PASSWORD语句修改或设置指定用户的密码，命令格式如下所示(需要先登录mysql服务器,但无需使用FLUSH PRIVILEGES)：   </p>
 <blockquote>
-<p>mysql&gt;SET　PASSWORD　FOR　wjw@’%’　=　PASSWORD(‘123456’)；  </p>
+<p>　mysql&gt;SET　PASSWORD　FOR　wjw@’%’　=　PASSWORD(‘123456’)；  </p>
 <a id="more"></a> 
 <h3 id="u6DFB_u52A0_u6570_u636E_u5E93_u7528_u6237"><a href="#u6DFB_u52A0_u6570_u636E_u5E93_u7528_u6237" class="headerlink" title="添加数据库用户"></a>添加数据库用户</h3></blockquote>
 </li>
 <li><p>操作mysql.user表，直接在其中插入一个用户信息，需要使用FLUSH PRIVILEGES，使操作生效，命令格式如下：   </p>
 <blockquote>
-<p>mysql&gt;INSERT　INTO　mysql.user(Host,User,Password)　VALUES(‘%’,’wjw’,PASSWORD(‘123456’))；<br>mysql&gt;FLUSH　PRIVILEGES；　　　</p>
+<p>　mysql&gt;INSERT　INTO　mysql.user(Host,User,Password)　VALUES(‘%’,’wjw’,PASSWORD(‘123456’))；<br>　mysql&gt;FLUSH　PRIVILEGES；　　　</p>
 </blockquote>
 </li>
 <li><p>使用GRANT … IDENTIFIED BY权限管理语句，命令格式如下所示：</p>
 <blockquote>
-<p>mysql&gt;GRANT　USAGE　ON　＊．＊　TO　wjw@’%’　IDENTIFIED　BY　‘123456’；   </p>
+<p>　mysql&gt;GRANT　USAGE　ON　＊．＊　TO　wjw@’%’　IDENTIFIED　BY　‘123456’；   </p>
 </blockquote>
 </li>
 </ul>
@@ -329,31 +329,31 @@ $ mysqladmin　-u　root　password　abcdef">
 <li>直接操作mysql.user表，从中删除指定的用户，并且FLUSH　PRIVILEGES使操作生效，命令格式如下：</li>
 </ul>
 <blockquote>
-<p>mysql&gt;DELETE　FROM　mysql.user　WHERE　User =　‘wjw’；<br>mysql&gt;FLUSH　PRIVILEGES；   </p>
+<p>　mysql&gt;DELETE　FROM　mysql.user　WHERE　User =　‘wjw’；<br>　mysql&gt;FLUSH　PRIVILEGES；   </p>
 </blockquote>
 <h3 id="u6570_u636E_u5E93_u7BA1_u7406_u64CD_u4F5C"><a href="#u6570_u636E_u5E93_u7BA1_u7406_u64CD_u4F5C" class="headerlink" title="数据库管理操作"></a>数据库管理操作</h3><ul>
 <li>查看MySQL的安装版本 (无需登录先MySQL服务器)  </li>
 </ul>
 <blockquote>
-<p>$mysqladmin -uroot -p123456 version   </p>
+<p>　$mysqladmin -uroot -p123456 version   </p>
 </blockquote>
 <ul>
 <li>查看MySQL当前状态   </li>
 </ul>
 <blockquote>
-<p>$mysqladmin -uroot -p123456 status   </p>
+<p>　$mysqladmin -uroot -p123456 status   </p>
 </blockquote>
 <ul>
 <li>更新或重载privilege表或者grants表</li>
 </ul>
 <blockquote>
-<p>$mysqladmin -uroot -p123456 reload<br>$mysqladmin -uroot -p123456 refresh   </p>
+<p>　$mysqladmin -uroot -p123456 reload<br>　$mysqladmin -uroot -p123456 refresh   </p>
 </blockquote>
 <ul>
 <li>关闭MySQL服务器的安全方法</li>
 </ul>
 <blockquote>
-<p>mysqladmin -uroot -p123456 shutdown   </p>
+<p>　$mysqladmin -uroot -p123456 shutdown   </p>
 </blockquote>
 <ul>
 <li>查看所有的MySQL服务器状态变量及其当前值   </li>
@@ -384,17 +384,13 @@ $ mysqladmin　-u　root　password　abcdef">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/09/Hexo使用常见问题汇总/" rel="next" title="Hexo使用常见问题汇总">
-                <i class="fa fa-chevron-left"></i> Hexo使用常见问题汇总
+              <a href="/2016/02/16/Mysql数据库的导入与导出/" rel="next" title="Mysql数据库的导入与导出">
+                <i class="fa fa-chevron-left"></i> Mysql数据库的导入与导出
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/16/Mysql数据库的导入与导出/" rel="prev" title="Mysql数据库的导入与导出">
-                Mysql数据库的导入与导出 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
