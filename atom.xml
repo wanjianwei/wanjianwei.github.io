@@ -4,7 +4,7 @@
   <subtitle><![CDATA[从心所愿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-17T12:47:24.688Z</updated>
+  <updated>2016-02-17T12:58:05.443Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/02/17/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2016/02/17/MySQL数据库学习总结/</id>
     <published>2016-02-17T06:35:23.000Z</published>
-    <updated>2016-02-17T12:47:24.688Z</updated>
+    <updated>2016-02-17T12:58:05.443Z</updated>
     <content type="html"><![CDATA[<h3 id="u5E38_u7528_u5B57_u6BB5_u7C7B_u578B_28type_29"><a href="#u5E38_u7528_u5B57_u6BB5_u7C7B_u578B_28type_29" class="headerlink" title="常用字段类型(type)"></a>常用字段类型(type)</h3><p>MySQL中的数据类型大致可分为：日期和时间，数值以及字符串。各类型的详细介绍如下所示   </p>
 <ul>
 <li><strong>日期和时间数据类型</strong>   </li>
@@ -208,10 +208,7 @@
 </ul>
 <p>　既然系统之间是按照二进制流进行传输的，那直接把这串二进制流直接存入表文件就好啦。为什么在存储之前还要进行两次编解码的操作呢？   </p>
 <blockquote>
-<ul>
-<li>Client to MySQL Server的编解码的原因是MySQL需要对传来的二进制流做语法和词法解析。如果不做编码解析和校验，我们甚至没法知道传来的一串二进制流是insert还是update。   </li>
-<li>File to Engine的编解码是为知道二进制流内的分词情况。举个简单的例子：我们想要从表里取出某个字段的前两个字符，执行了一句形如select left(col,2) from table的语句，存储引擎从文件读入该column的值是E4B8ADE69687。那么这个时候如果我们按照GBK把这个值分割成E4B8,ADE6,9687三个字，并那么返回客户端的值就应该是E4B8ADE6；如果按照UTF8分割成E4B8AD,E69687，那么就应该返回E4B8ADE69687两个字。可见，如果在从数据文件读入数据后，不进行编解码的话在存储引擎内部是无法进行<strong>字符级别</strong>的操作的。   </li>
-</ul>
+<p>1、Client to MySQL Server的编解码的原因是MySQL需要对传来的二进制流做语法和词法解析。如果不做编码解析和校验，我们甚至没法知道传来的一串二进制流是insert还是update。<br>2、File to Engine的编解码是为知道二进制流内的分词情况。举个简单的例子：我们想要从表里取出某个字段的前两个字符，执行了一句形如select left(col,2) from table的语句，存储引擎从文件读入该column的值是E4B8ADE69687。那么这个时候如果我们按照GBK把这个值分割成E4B8,ADE6,9687三个字，并那么返回客户端的值就应该是E4B8ADE6；如果按照UTF8分割成E4B8AD,E69687，那么就应该返回E4B8ADE69687两个字。可见，如果在从数据文件读入数据后，不进行编解码的话在存储引擎内部是无法进行<strong>字符级别</strong>的操作的。   </p>
 </blockquote>
 <h3 id="MySQL_u7684_u5F15_u64CE"><a href="#MySQL_u7684_u5F15_u64CE" class="headerlink" title="MySQL的引擎"></a>MySQL的引擎</h3><ul>
 <li><strong>存储引擎是什么？</strong>   </li>
@@ -224,13 +221,8 @@
 <li><strong>MyISAM与InnoDB区别</strong>   </li>
 </ul>
 <blockquote>
-<ul>
-<li><p>1、MyISAM类型不支持事务处理等高级处理，而InnoDB类型支持；<br><em>所谓事务处理，就是原子性操作。<br>打个比方，支持事务处理的Innodb表，建设一个中，发帖是给积分的。你发了一个帖子执行一个insert语句，来插入帖子内容，插入后就要执行一个update语句来增加你的积分。假设一种特殊情况突然发生，insert成功了，update操作却没有被执行。也就是说你发了帖子却没有增加相应的积分。这就会造成用户不满。如果使用了事务处理，insert和update都放入到事务中去执行，这个时候，只有当insert和update两条语句都执行生成的时候才会将数据更新、写入其中，如果其中任何一条语句失败，那么就会回滚为初始状态，不执行写入。这样就保证了insert和update肯定是一同执行的。</em>   </p>
-</li>
-<li><p>2、MyISAM类型不支持外键，而InnoDB支持；   </p>
-</li>
-<li>3、在执行数据库写入操作时（insert，update，delete），MyISAM会锁表，而InnoDB会锁行；<br><em>通俗点说，就是你执行了一个update语句，那么mysiam表会将整个表都锁住，其他的insert和delete、update都会被拒之门外，等到这个update语句执行完成后才会被依次执行。而锁行，就是说，你执行update语句是，只会将这一条记录进行锁定，只有针对这条记录的其他写入、更新操作会被阻塞并等待这条update语句执行完毕后再执行，针对其他记录的写入操作不会有影响。</em>   </li>
-</ul>
+<p>1、MyISAM类型不支持事务处理等高级处理，而InnoDB类型支持；<br>　<em>所谓事务处理，就是原子性操作。<br>打个比方，支持事务处理的Innodb表，建设一个中，发帖是给积分的。你发了一个帖子执行一个insert语句，来插入帖子内容，插入后就要执行一个update语句来增加你的积分。假设一种特殊情况突然发生，insert成功了，update操作却没有被执行。也就是说你发了帖子却没有增加相应的积分。这就会造成用户不满。如果使用了事务处理，insert和update都放入到事务中去执行，这个时候，只有当insert和update两条语句都执行生成的时候才会将数据更新、写入其中，如果其中任何一条语句失败，那么就会回滚为初始状态，不执行写入。这样就保证了insert和update肯定是一同执行的。</em>   </p>
+<p>2、MyISAM类型不支持外键，而InnoDB支持；<br>3、在执行数据库写入操作时（insert，update，delete），MyISAM会锁表，而InnoDB会锁行；<br>　<em>通俗点说，就是你执行了一个update语句，那么mysiam表会将整个表都锁住，其他的insert和delete、update都会被拒之门外，等到这个update语句执行完成后才会被依次执行。而锁行，就是说，你执行update语句是，只会将这一条记录进行锁定，只有针对这条记录的其他写入、更新操作会被阻塞并等待这条update语句执行完毕后再执行，针对其他记录的写入操作不会有影响。</em>   </p>
 </blockquote>
 <p>　因此，当你的数据库有大量的写入、更新操作而查询比较少或者数据完整性要求比较高的时候就选择innodb表。当你的数据库主要以查询为主，相比较而言更新和写入比较少，并且业务方面数据完整性要求不那么严格，就选择mysiam表。因为mysiam表的查询操作效率和速度都比innodb要快</p>
 <h3 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h3><blockquote>
