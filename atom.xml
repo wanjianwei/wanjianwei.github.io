@@ -4,7 +4,7 @@
   <subtitle><![CDATA[从心所愿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-18T09:46:07.002Z</updated>
+  <updated>2016-02-18T09:55:41.847Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,31 +19,32 @@
     <link href="http://yoursite.com/2016/02/18/MySQL%E7%9A%84%E4%BA%8B%E7%89%A9%E5%8F%8A%E5%9B%9E%E6%BB%9A%E7%AE%80%E8%BF%B0/"/>
     <id>http://yoursite.com/2016/02/18/MySQL的事物及回滚简述/</id>
     <published>2016-02-18T08:59:11.000Z</published>
-    <updated>2016-02-18T09:46:07.002Z</updated>
+    <updated>2016-02-18T09:55:41.847Z</updated>
     <content type="html"><![CDATA[<h3 id="u4F55_u4E3A_u4E8B_u52A1"><a href="#u4F55_u4E3A_u4E8B_u52A1" class="headerlink" title="何为事务"></a>何为事务</h3><p>　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。   </p>
 <a id="more"></a>   
 <h3 id="u4F55_u4E3A_u56DE_u6EDA"><a href="#u4F55_u4E3A_u56DE_u6EDA" class="headerlink" title="何为回滚"></a>何为回滚</h3><p>　回滚的意思是如果之前是插入操作，那么会执行删除插入的记录，如果之前是update操作，也会执行update操作将之前的记录还原。在MySQL中，存储引擎为InnoDB的可以支持事务回滚，而MyISAM存储类型不支持。（可使用“ALTER TABLE 表名 ENGINE = InnoDB”sql语句修改）；   </p>
 <h3 id="u4E8B_u52A1_u5904_u7406_u64CD_u4F5C"><a href="#u4E8B_u52A1_u5904_u7406_u64CD_u4F5C" class="headerlink" title="事务处理操作"></a>事务处理操作</h3><ul>
-<li>1、用START TRANSACTION/BEGIN，ROOLBACK，COMMIT来实现</li>
+<li><strong>1、用START TRANSACTION/BEGIN，ROOLBACK，COMMIT来实现</strong></li>
 </ul>
 <blockquote>
-<p>START TRANSACTION/BEGIN用来开始一个事务；<br>ROOLBACK用于事务失败后进行手动回滚；<br>COMMIT用于事务确认及提交；   </p>
+<p>　START TRANSACTION/BEGIN用来开始一个事务；<br>　ROOLBACK用于事务失败后进行手动回滚；<br>　COMMIT用于事务确认及提交；   </p>
 </blockquote>
 <ul>
-<li>2、直接用set来改变MySQL的自动提交模式   <blockquote>
-<p>MySQL默认是自动提交事务的，也就是我们提交一个query，它就直接执行!因此，我们可以通过以下命令来实现事务的处理<br>set autocommit = 0 禁止自动提交；<br>set autocommit = 1 开启自动提交；   </p>
-</blockquote>
-</li>
+<li><strong>2、直接用set来改变MySQL的自动提交模式</strong>      </li>
 </ul>
+<blockquote>
+<p>　MySQL默认是自动提交事务的，也就是我们提交一个query，它就直接执行!因此，我们可以通过以下命令来实现事务的处理<br>　set autocommit = 0 禁止自动提交；<br>　set autocommit = 1 开启自动提交；   </p>
+</blockquote>
 <p>　当你用 set autocommit=0 的时候，你以后所有的SQL都将做为事务处理，直到你用commit确认或rollback结束。注意当你结束这个事务的同时也开启了个新的事务！按第一种方法只将当前的作为一个事务！   </p>
 <ul>
-<li>3、保存点   </li>
+<li><strong>3、保存点</strong>   </li>
 </ul>
 <p>　通过保存点机制:用户可以在事物里用<strong>savepoint name</strong>命令设置一些保存点,以后用户在使用<strong>rollback to savepoint name</strong>结束事物时，name之前的数据保存，之后的数据不保存   </p>
 <p><strong>保存点注意</strong>   </p>
 <blockquote>
-<p>1、只能取消到某个保存点 rollback to savepoint p1；<br>2、不能提交某个保存 commit to savepoint p2//错误写法<br>3、最后commit 把未取消的保存点提交到数据<br><img src="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86.jpg" alt="事务处理"></p>
+<p>1、只能取消到某个保存点 rollback to savepoint p1；<br>2、不能提交某个保存 commit to savepoint p2//错误写法<br>3、最后commit 把未取消的保存点提交到数据   </p>
 </blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86.jpg" alt="事务处理"></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="u4F55_u4E3A_u4E8B_u52A1"><a href="#u4F55_u4E3A_u4E8B_u52A1" class="headerlink" title="何为事务"></a>何为事务</h3><p>　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。   </p>]]>
