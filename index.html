@@ -251,8 +251,240 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/18/MySQL的事物及回滚简述/" itemprop="url">
-                  MySQL的事物及回滚简述
+                <a class="post-title-link" href="/2016/02/23/git学习之仓库提交及分支管理/" itemprop="url">
+                  git学习之代码仓库提交及分支管理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-23T14:33:17+08:00" content="2016-02-23">
+              2016-02-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/git指令学习/" itemprop="url" rel="index">
+                    <span itemprop="name">git指令学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/23/git学习之仓库提交及分支管理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ul>
+<li><strong>git基本命令</strong><br>$ git init　<em>初始化git</em>；<br>$ git add　<em>添加git索引，可以是文件，也可以是目录路径</em>；<br>$ git commit　<em>提交更改</em>；<br>$ git remote add origin https：//github.com/####/###　<em>与远程github的repository关联</em>；<br>$ git remote rm origin　<em>删除与远程仓库的关联</em><br>$ git push -u origin master　<em>将本地项目push到远程仓库中的master分支中，可以替换成其它分支</em>   </li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/23/git学习之仓库提交及分支管理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/" itemprop="url">
+                  git push 后后提示ssh:Could not resolve hostname github解决方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-23T13:46:40+08:00" content="2016-02-23">
+              2016-02-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/git指令学习/" itemprop="url" rel="index">
+                    <span itemprop="name">git指令学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>　在github上添加了SSH Key之后，再将本地项目推送到github上，有时会出现如下所示的错误：   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%AD%A6%E4%B9%A01.png" alt="git学1">   </p>
+</blockquote>
+<p>原因在于origin不应当是“git@github：####/###”的形式，而应该按照github上的教程，改为“https：//github.com/####/###”的形式，如下图所示：   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%AD%A6%E4%B9%A02.png" alt="git学习2">   </p>
+</blockquote>
+<p>随后输入github用户名和密码即可push成功；</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/18/MySQL的事务及回滚简述/" itemprop="url">
+                  MySQL的事务及回滚简述
                 </a>
               
             
@@ -295,8 +527,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/18/MySQL的事物及回滚简述/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/MySQL的事物及回滚简述/" itemprop="commentsCount"></span>
+                <a href="/2016/02/18/MySQL的事务及回滚简述/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/MySQL的事务及回滚简述/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -320,7 +552,7 @@
         
           <h3 id="u4F55_u4E3A_u4E8B_u52A1"><a href="#u4F55_u4E3A_u4E8B_u52A1" class="headerlink" title="何为事务"></a>何为事务</h3><p>　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。   </p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/18/MySQL的事物及回滚简述/#more" rel="contents">
+            <a class="btn" href="/2016/02/18/MySQL的事务及回滚简述/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -584,243 +816,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="url">
-                  Mysql数据库之用户管理及密码修改
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-16T19:18:42+08:00" content="2016-02-16">
-              2016-02-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL数据库开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/16/Mysql数据库之用户管理及密码修改/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
-<li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
-<blockquote>
-<p>　$mysqladmin　-u　root　password　abcdef   </p>
-</blockquote>
-</li>
-<li><p>如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   </p>
-<blockquote>
-<p>　$mysqladmin　-uroot　-pabcdef　password　123456   </p>
-</blockquote>
-</li>
-<li><p>直接使用SET　PASSWORD语句修改或设置指定用户的密码，命令格式如下所示(需要先登录mysql服务器,但无需使用FLUSH PRIVILEGES)：   </p>
-<blockquote>
-<p>　mysql&gt;SET　PASSWORD　FOR　wjw@’%’　=　PASSWORD(‘123456’)；  </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/16/Mysql数据库之用户管理及密码修改/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/09/Hexo使用常见问题汇总/" itemprop="url">
-                  Hexo使用常见问题汇总
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-09T21:40:58+08:00" content="2016-02-09">
-              2016-02-09
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/09/Hexo使用常见问题汇总/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/09/Hexo使用常见问题汇总/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          在辛苦利用Hexo搭建好自己的个人博客后，本想着就此可以无忧无虐的编写自己的博客了，但不想再试水写第一篇博客时，就遇到了一些问题，经过在网上的一番查找，终于是找到了答案，故想把它们总结记录下来，以供读者及自己日后查阅，避免再犯类似的错误。该博客目前处于更新中，我会把自己日常使用Hexo博客所遇到的问题一并记录在此。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/09/Hexo使用常见问题汇总/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -867,7 +862,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -875,7 +870,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -884,7 +879,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

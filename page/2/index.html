@@ -247,6 +247,243 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="url">
+                  Mysql数据库之用户管理及密码修改
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-16T19:18:42+08:00" content="2016-02-16">
+              2016-02-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL数据库开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/16/Mysql数据库之用户管理及密码修改/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A"><a href="#u4FEE_u6539_u6570_u636E_u5E93_u7528_u6237_u5BC6_u7801_uFF1A" class="headerlink" title="修改数据库用户密码："></a>修改数据库用户密码：</h3><ul>
+<li><p>如果你的root用户现在没有密码，我们希望将密码设置为abcdef，那么可输入如下命令（无需先登录mysql服务器):     </p>
+<blockquote>
+<p>　$mysqladmin　-u　root　password　abcdef   </p>
+</blockquote>
+</li>
+<li><p>如果root用户已经有密码（abcdef），而我们想修改它为123456，则可输入如下命令(无需先登录mysql服务器):   </p>
+<blockquote>
+<p>　$mysqladmin　-uroot　-pabcdef　password　123456   </p>
+</blockquote>
+</li>
+<li><p>直接使用SET　PASSWORD语句修改或设置指定用户的密码，命令格式如下所示(需要先登录mysql服务器,但无需使用FLUSH PRIVILEGES)：   </p>
+<blockquote>
+<p>　mysql&gt;SET　PASSWORD　FOR　wjw@’%’　=　PASSWORD(‘123456’)；  </p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/16/Mysql数据库之用户管理及密码修改/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/09/Hexo使用常见问题汇总/" itemprop="url">
+                  Hexo使用常见问题汇总
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-09T21:40:58+08:00" content="2016-02-09">
+              2016-02-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo教程</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/09/Hexo使用常见问题汇总/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/09/Hexo使用常见问题汇总/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          在辛苦利用Hexo搭建好自己的个人博客后，本想着就此可以无忧无虐的编写自己的博客了，但不想再试水写第一篇博客时，就遇到了一些问题，经过在网上的一番查找，终于是找到了答案，故想把它们总结记录下来，以供读者及自己日后查阅，避免再犯类似的错误。该博客目前处于更新中，我会把自己日常使用Hexo博客所遇到的问题一并记录在此。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/09/Hexo使用常见问题汇总/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/07/hexo语法/" itemprop="url">
                   hexo常用命令总结
                 </a>
@@ -613,7 +850,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -621,7 +858,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -630,7 +867,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

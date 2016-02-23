@@ -61,14 +61,14 @@
 
 <meta name="description" content="何为事务　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL的事物及回滚简述">
-<meta property="og:url" content="http://yoursite.com/2016/02/18/MySQL的事物及回滚简述/index.html">
+<meta property="og:title" content="MySQL的事务及回滚简述">
+<meta property="og:url" content="http://yoursite.com/2016/02/18/MySQL的事务及回滚简述/index.html">
 <meta property="og:site_name" content="万建伟's Blog">
 <meta property="og:description" content="何为事务　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。">
 <meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86.jpg">
-<meta property="og:updated_time" content="2016-02-18T09:55:41.847Z">
+<meta property="og:updated_time" content="2016-02-23T04:50:58.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL的事物及回滚简述">
+<meta name="twitter:title" content="MySQL的事务及回滚简述">
 <meta name="twitter:description" content="何为事务　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。">
 
 
@@ -87,7 +87,7 @@
   };
 </script>
 
-  <title> MySQL的事物及回滚简述 | 万建伟's Blog </title>
+  <title> MySQL的事务及回滚简述 | 万建伟's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -235,7 +235,7 @@
             
             
               
-                MySQL的事物及回滚简述
+                MySQL的事务及回滚简述
               
             
           </h1>
@@ -277,8 +277,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/18/MySQL的事物及回滚简述/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/MySQL的事物及回滚简述/" itemprop="commentsCount"></span>
+                <a href="/2016/02/18/MySQL的事务及回滚简述/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/MySQL的事务及回滚简述/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -349,6 +349,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/" rel="prev" title="git push 后后提示ssh:Could not resolve hostname github解决方法">
+                git push 后后提示ssh:Could not resolve hostname github解决方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -362,10 +366,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/18/MySQL的事物及回滚简述/"
-     data-title="MySQL的事物及回滚简述"
+        <div class="ds-share flat" data-thread-key="2016/02/18/MySQL的事务及回滚简述/"
+     data-title="MySQL的事务及回滚简述"
      data-content=""
-     data-url="http://yoursite.com/2016/02/18/MySQL的事物及回滚简述/">
+     data-url="http://yoursite.com/2016/02/18/MySQL的事务及回滚简述/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -395,8 +399,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/18/MySQL的事物及回滚简述/"
-           data-title="MySQL的事物及回滚简述" data-url="http://yoursite.com/2016/02/18/MySQL的事物及回滚简述/">
+      <div class="ds-thread" data-thread-key="2016/02/18/MySQL的事务及回滚简述/"
+           data-title="MySQL的事务及回滚简述" data-url="http://yoursite.com/2016/02/18/MySQL的事务及回滚简述/">
       </div>
     
   </div>
@@ -441,7 +445,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -449,7 +453,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -458,7 +462,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

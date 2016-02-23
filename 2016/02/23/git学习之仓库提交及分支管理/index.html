@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mysql," />
+  <meta name="keywords" content="git,github," />
 
 
 
@@ -59,31 +59,24 @@
 
 
 
-<meta name="description" content="数据库导出数据库的导出无需登录MySQL服务器 
-
-一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   
-
-
-　$mysqldump　-h serverIp　-u username　-p password　数据库名 &amp;gt; 目录/ｏputfile_name.sql　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；　u参数表示用户名；　p参数">
+<meta name="description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql数据库的导入与导出">
-<meta property="og:url" content="http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/index.html">
+<meta property="og:title" content="git学习之代码仓库提交及分支管理">
+<meta property="og:url" content="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/index.html">
 <meta property="og:site_name" content="万建伟's Blog">
-<meta property="og:description" content="数据库导出数据库的导出无需登录MySQL服务器 
-
-一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   
-
-
-　$mysqldump　-h serverIp　-u username　-p password　数据库名 &amp;gt; 目录/ｏputfile_name.sql　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；　u参数表示用户名；　p参数">
-<meta property="og:updated_time" content="2016-02-16T13:39:40.474Z">
+<meta property="og:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png">
+<meta property="og:updated_time" content="2016-02-23T07:31:51.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mysql数据库的导入与导出">
-<meta name="twitter:description" content="数据库导出数据库的导出无需登录MySQL服务器 
-
-一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   
-
-
-　$mysqldump　-h serverIp　-u username　-p password　数据库名 &amp;gt; 目录/ｏputfile_name.sql　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；　u参数表示用户名；　p参数">
+<meta name="twitter:title" content="git学习之代码仓库提交及分支管理">
+<meta name="twitter:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
 
 
 
@@ -101,7 +94,7 @@
   };
 </script>
 
-  <title> Mysql数据库的导入与导出 | 万建伟's Blog </title>
+  <title> git学习之代码仓库提交及分支管理 | 万建伟's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +242,7 @@
             
             
               
-                Mysql数据库的导入与导出
+                git学习之代码仓库提交及分支管理
               
             
           </h1>
@@ -261,8 +254,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-16T20:54:46+08:00" content="2016-02-16">
-              2016-02-16
+            <time itemprop="dateCreated" datetime="2016-02-23T14:33:17+08:00" content="2016-02-23">
+              2016-02-23
             </time>
           </span>
 
@@ -275,8 +268,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL数据库开发</span>
+                  <a href="/categories/git指令学习/" itemprop="url" rel="index">
+                    <span itemprop="name">git指令学习</span>
                   </a>
                 </span>
 
@@ -291,8 +284,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/16/Mysql数据库的导入与导出/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/Mysql数据库的导入与导出/" itemprop="commentsCount"></span>
+                <a href="/2016/02/23/git学习之仓库提交及分支管理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -313,37 +306,54 @@
       
 
       
-        <h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
+        <ul>
+<li><strong>git基本命令</strong><br>$ git init　<em>初始化git</em>；<br>$ git add　<em>添加git索引，可以是文件，也可以是目录路径</em>；<br>$ git commit　<em>提交更改</em>；<br>$ git remote add origin https：//github.com/####/###　<em>与远程github的repository关联</em>；<br>$ git remote rm origin　<em>删除与远程仓库的关联</em><br>$ git push -u origin master　<em>将本地项目push到远程仓库中的master分支中，可以替换成其它分支</em>   </li>
+</ul>
+<a id="more"></a> 
 <ul>
-<li>一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
+<li><strong>分支管理</strong></li>
+</ul>
+<p>一、查看本地分支 git branch<br>名字前有“*”的表示是当前分支   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="查看本地分支">   </p>
+</blockquote>
+<p>二、查看所有分支（包括远程的） git branch -a<br>其中，颜色为红色的是远程仓库的分支   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png" alt="所有分支">   </p>
+</blockquote>
+<p>三、切换本地分支 git checkout ###   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="切换本地分支">   </p>
+</blockquote>
+<p>四、创建本地分支 git branch ###   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="创建本地分支">   </p>
+</blockquote>
+<p>五、删除本地分支 git branch -d ###   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="删除本地分支">   </p>
+</blockquote>
+<p>六、创建本地分支与远程分支关联   </p>
+<blockquote>
+<p>$ git checkout dev origin/dev<br>说明：创建本地分支dev，并且和远程origin/dev分支关联，本地dev分支的初始化代码和远程dev分支代码一样；   </p>
+</blockquote>
+<p>七、删除远程分支   </p>
+<blockquote>
+<p>$git push origin <strong>:</strong>branchName<br>冒号前面的空格不能少，原理就是把一个空分支push到server上，相当于删除该分支；   </p>
+</blockquote>
+<ul>
+<li><strong>分支切换时可能遇到的问题</strong></li>
 </ul>
 <blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/ｏputfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png" alt="切换问题"></p>
 </blockquote>
-<ul>
-<li>二、导出某个表，命令格式如下：</li>
-</ul>
+<p>解决方法一：<br>-f –force，忽略更改，强制切换   </p>
 <blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>　参数解释如上所示；<br>　eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png" alt="方法一">   </p>
 </blockquote>
-<a id="more"></a>
-<h3 id="u6570_u636E_u5E93_u7684_u5BFC_u5165"><a href="#u6570_u636E_u5E93_u7684_u5BFC_u5165" class="headerlink" title="数据库的导入"></a>数据库的导入</h3><p><strong>数据库的导入要先登录MySQL服务器，常用source命令，步骤如下所示</strong>   </p>
-<ul>
-<li><p>先登录MySQL服务器   </p>
+<p>解决方法二：   </p>
 <blockquote>
-<p>　mysql　-h120.23.123.212　-uwjw　-pwjw<br>　这是本地直接登录远程数据库，也可以利用putty等ssh工具登录；</p>
-</blockquote>
-</li>
-<li><p>选定要导入数据的数据库</p>
-<blockquote>
-<p>　mysql&gt;use　database1;   </p>
-</blockquote>
-</li>
-<li><p>使用source命令导入本地的sql文件</p>
-</li>
-</ul>
-<blockquote>
-<p>　mysql&gt;source　/home/wanjianwei/database1.sql；</p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png" alt="方法二">  </p>
 </blockquote>
 
       
@@ -353,7 +363,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Mysql/" rel="tag">#Mysql</a>
+            <a href="/tags/git/" rel="tag">#git</a>
+          
+            <a href="/tags/github/" rel="tag">#github</a>
           
         </div>
       
@@ -362,17 +374,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/16/Mysql数据库之用户管理及密码修改/" rel="next" title="Mysql数据库之用户管理及密码修改">
-                <i class="fa fa-chevron-left"></i> Mysql数据库之用户管理及密码修改
+              <a href="/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/" rel="next" title="git push 后后提示ssh:Could not resolve hostname github解决方法">
+                <i class="fa fa-chevron-left"></i> git push 后后提示ssh:Could not resolve hostname github解决方法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/17/MySQL数据库学习总结/" rel="prev" title="MySQL数据库学习笔记">
-                MySQL数据库学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -387,10 +395,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/16/Mysql数据库的导入与导出/"
-     data-title="Mysql数据库的导入与导出"
+        <div class="ds-share flat" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
+     data-title="git学习之代码仓库提交及分支管理"
      data-content=""
-     data-url="http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/">
+     data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -420,8 +428,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/16/Mysql数据库的导入与导出/"
-           data-title="Mysql数据库的导入与导出" data-url="http://yoursite.com/2016/02/16/Mysql数据库的导入与导出/">
+      <div class="ds-thread" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
+           data-title="git学习之代码仓库提交及分支管理" data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
       </div>
     
   </div>
@@ -560,7 +568,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u5E93_u5BFC_u51FA"><span class="nav-number">1.</span> <span class="nav-text">数据库导出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u5E93_u7684_u5BFC_u5165"><span class="nav-number">2.</span> <span class="nav-text">数据库的导入</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[从心所愿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-18T09:55:41.847Z</updated>
+  <updated>2016-02-23T07:31:51.710Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,112 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[MySQL的事物及回滚简述]]></title>
-    <link href="http://yoursite.com/2016/02/18/MySQL%E7%9A%84%E4%BA%8B%E7%89%A9%E5%8F%8A%E5%9B%9E%E6%BB%9A%E7%AE%80%E8%BF%B0/"/>
-    <id>http://yoursite.com/2016/02/18/MySQL的事物及回滚简述/</id>
+    <title><![CDATA[git学习之代码仓库提交及分支管理]]></title>
+    <link href="http://yoursite.com/2016/02/23/git%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%93%E5%BA%93%E6%8F%90%E4%BA%A4%E5%8F%8A%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/"/>
+    <id>http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/</id>
+    <published>2016-02-23T06:33:17.000Z</published>
+    <updated>2016-02-23T07:31:51.710Z</updated>
+    <content type="html"><![CDATA[<ul>
+<li><strong>git基本命令</strong><br>$ git init　<em>初始化git</em>；<br>$ git add　<em>添加git索引，可以是文件，也可以是目录路径</em>；<br>$ git commit　<em>提交更改</em>；<br>$ git remote add origin https：//github.com/####/###　<em>与远程github的repository关联</em>；<br>$ git remote rm origin　<em>删除与远程仓库的关联</em><br>$ git push -u origin master　<em>将本地项目push到远程仓库中的master分支中，可以替换成其它分支</em>   </li>
+</ul>
+<a id="more"></a> 
+<ul>
+<li><strong>分支管理</strong></li>
+</ul>
+<p>一、查看本地分支 git branch<br>名字前有“*”的表示是当前分支   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="查看本地分支">   </p>
+</blockquote>
+<p>二、查看所有分支（包括远程的） git branch -a<br>其中，颜色为红色的是远程仓库的分支   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png" alt="所有分支">   </p>
+</blockquote>
+<p>三、切换本地分支 git checkout ###   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="切换本地分支">   </p>
+</blockquote>
+<p>四、创建本地分支 git branch ###   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="创建本地分支">   </p>
+</blockquote>
+<p>五、删除本地分支 git branch -d ###   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="删除本地分支">   </p>
+</blockquote>
+<p>六、创建本地分支与远程分支关联   </p>
+<blockquote>
+<p>$ git checkout dev origin/dev<br>说明：创建本地分支dev，并且和远程origin/dev分支关联，本地dev分支的初始化代码和远程dev分支代码一样；   </p>
+</blockquote>
+<p>七、删除远程分支   </p>
+<blockquote>
+<p>$git push origin <strong>:</strong>branchName<br>冒号前面的空格不能少，原理就是把一个空分支push到server上，相当于删除该分支；   </p>
+</blockquote>
+<ul>
+<li><strong>分支切换时可能遇到的问题</strong></li>
+</ul>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png" alt="切换问题"></p>
+</blockquote>
+<p>解决方法一：<br>-f –force，忽略更改，强制切换   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png" alt="方法一">   </p>
+</blockquote>
+<p>解决方法二：   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png" alt="方法二">  </p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ul>
+<li><strong>git基本命令</strong><br>$ git init　<em>初始化git</em>；<br>$ git add　<em>添加git索引，可以是文件，也可以是目录路径</em>；<br>$ git commit　<em>提交更改</em>；<br>$ git remote add origin https：//github.com/####/###　<em>与远程github的repository关联</em>；<br>$ git remote rm origin　<em>删除与远程仓库的关联</em><br>$ git push -u origin master　<em>将本地项目push到远程仓库中的master分支中，可以替换成其它分支</em>   </li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="git指令学习" scheme="http://yoursite.com/categories/git%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[git push 后后提示ssh:Could not resolve hostname github解决方法]]></title>
+    <link href="http://yoursite.com/2016/02/23/git-push-%E5%90%8E%E5%90%8E%E6%8F%90%E7%A4%BAssh-Could-not-resolve-hostname-github%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/</id>
+    <published>2016-02-23T05:46:40.000Z</published>
+    <updated>2016-02-23T06:32:08.624Z</updated>
+    <content type="html"><![CDATA[<p>　在github上添加了SSH Key之后，再将本地项目推送到github上，有时会出现如下所示的错误：   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%AD%A6%E4%B9%A01.png" alt="git学1">   </p>
+</blockquote>
+<p>原因在于origin不应当是“git@github：####/###”的形式，而应该按照github上的教程，改为“https：//github.com/####/###”的形式，如下图所示：   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%AD%A6%E4%B9%A02.png" alt="git学习2">   </p>
+</blockquote>
+<p>随后输入github用户名和密码即可push成功；</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>　在github上添加了SSH Key之后，再将本地项目推送到github上，有时会出现如下所示的错误：   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%AD%A6%]]>
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="git指令学习" scheme="http://yoursite.com/categories/git%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MySQL的事务及回滚简述]]></title>
+    <link href="http://yoursite.com/2016/02/18/MySQL%E7%9A%84%E4%BA%8B%E5%8A%A1%E5%8F%8A%E5%9B%9E%E6%BB%9A%E7%AE%80%E8%BF%B0/"/>
+    <id>http://yoursite.com/2016/02/18/MySQL的事务及回滚简述/</id>
     <published>2016-02-18T08:59:11.000Z</published>
-    <updated>2016-02-18T09:55:41.847Z</updated>
+    <updated>2016-02-23T04:50:58.297Z</updated>
     <content type="html"><![CDATA[<h3 id="u4F55_u4E3A_u4E8B_u52A1"><a href="#u4F55_u4E3A_u4E8B_u52A1" class="headerlink" title="何为事务"></a>何为事务</h3><p>　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。   </p>
 <a id="more"></a>   
 <h3 id="u4F55_u4E3A_u56DE_u6EDA"><a href="#u4F55_u4E3A_u56DE_u6EDA" class="headerlink" title="何为回滚"></a>何为回滚</h3><p>　回滚的意思是如果之前是插入操作，那么会执行删除插入的记录，如果之前是update操作，也会执行update操作将之前的记录还原。在MySQL中，存储引擎为InnoDB的可以支持事务回滚，而MyISAM存储类型不支持。（可使用“ALTER TABLE 表名 ENGINE = InnoDB”sql语句修改）；   </p>
