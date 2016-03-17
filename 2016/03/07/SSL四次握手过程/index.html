@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,github," />
+  <meta name="keywords" content="SSL，四次握手," />
 
 
 
@@ -59,24 +59,17 @@
 
 
 
-<meta name="description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta name="description" content="SSL协议简述 　　为了便于更好的认识和理解 SSL 协议，这里着重介绍 SSL 协议的握手协议。SSL 协议既用到了公钥加密技术(非对称加密)又用到了对称加密技术，SSL对传输内容的加密是采用的对称加密，然后对对称加密的密钥使用公钥进行非对称加密。这样做的好处是，对称加密技术比公钥加密技术的速度快，可用来加密较大的传输内容， 公钥加密技术相对较慢，提供了更好的身份认证技术，可用来加密对称加密过程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git学习之代码仓库提交及分支管理">
-<meta property="og:url" content="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/index.html">
+<meta property="og:title" content="SSL四次握手过程">
+<meta property="og:url" content="http://yoursite.com/2016/03/07/SSL四次握手过程/index.html">
 <meta property="og:site_name" content="万建伟's Blog">
-<meta property="og:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png">
-<meta property="og:updated_time" content="2016-02-23T07:31:51.710Z">
+<meta property="og:description" content="SSL协议简述 　　为了便于更好的认识和理解 SSL 协议，这里着重介绍 SSL 协议的握手协议。SSL 协议既用到了公钥加密技术(非对称加密)又用到了对称加密技术，SSL对传输内容的加密是采用的对称加密，然后对对称加密的密钥使用公钥进行非对称加密。这样做的好处是，对称加密技术比公钥加密技术的速度快，可用来加密较大的传输内容， 公钥加密技术相对较慢，提供了更好的身份认证技术，可用来加密对称加密过程">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/SSL%E5%9B%9B%E6%AC%A1%E6%8F%A1%E6%89%8B.png">
+<meta property="og:updated_time" content="2016-03-17T11:23:48.466Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git学习之代码仓库提交及分支管理">
-<meta name="twitter:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta name="twitter:title" content="SSL四次握手过程">
+<meta name="twitter:description" content="SSL协议简述 　　为了便于更好的认识和理解 SSL 协议，这里着重介绍 SSL 协议的握手协议。SSL 协议既用到了公钥加密技术(非对称加密)又用到了对称加密技术，SSL对传输内容的加密是采用的对称加密，然后对对称加密的密钥使用公钥进行非对称加密。这样做的好处是，对称加密技术比公钥加密技术的速度快，可用来加密较大的传输内容， 公钥加密技术相对较慢，提供了更好的身份认证技术，可用来加密对称加密过程">
 
 
 
@@ -94,7 +87,7 @@
   };
 </script>
 
-  <title> git学习之代码仓库提交及分支管理 | 万建伟's Blog </title>
+  <title> SSL四次握手过程 | 万建伟's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +235,7 @@
             
             
               
-                git学习之代码仓库提交及分支管理
+                SSL四次握手过程
               
             
           </h1>
@@ -254,8 +247,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-23T14:33:17+08:00" content="2016-02-23">
-              2016-02-23
+            <time itemprop="dateCreated" datetime="2016-03-07T15:24:50+08:00" content="2016-03-07">
+              2016-03-07
             </time>
           </span>
 
@@ -268,8 +261,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/git指令学习/" itemprop="url" rel="index">
-                    <span itemprop="name">git指令学习</span>
+                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机网络</span>
                   </a>
                 </span>
 
@@ -284,8 +277,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/23/git学习之仓库提交及分支管理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/" itemprop="commentsCount"></span>
+                <a href="/2016/03/07/SSL四次握手过程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/SSL四次握手过程/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,55 +299,25 @@
       
 
       
-        <ul>
-<li><strong>git基本命令</strong><br>$ git init　<em>初始化git</em>；<br>$ git add　<em>添加git索引，可以是文件，也可以是目录路径</em>；<br>$ git commit　<em>提交更改</em>；<br>$ git remote add origin https：//github.com/####/###　<em>与远程github的repository关联</em>；<br>$ git remote rm origin　<em>删除与远程仓库的关联</em><br>$ git push -u origin master　<em>将本地项目push到远程仓库中的master分支中，可以替换成其它分支</em>   </li>
-</ul>
-<a id="more"></a> 
-<ul>
-<li><strong>分支管理</strong></li>
-</ul>
-<p>一、查看本地分支 git branch<br>名字前有“*”的表示是当前分支   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="查看本地分支">   </p>
+        <h3 id="SSL_u534F_u8BAE_u7B80_u8FF0"><a href="#SSL_u534F_u8BAE_u7B80_u8FF0" class="headerlink" title="SSL协议简述"></a>SSL协议简述 　　</h3><p>为了便于更好的认识和理解 SSL 协议，这里着重介绍 SSL 协议的握手协议。SSL 协议既用到了公钥加密技术(非对称加密)又用到了对称加密技术，SSL对传输内容的加密是采用的对称加密，然后对对称加密的密钥使用公钥进行非对称加密。这样做的好处是，对称加密技术比公钥加密技术的速度快，可用来加密较大的传输内容， 公钥加密技术相对较慢，提供了更好的身份认证技术，可用来加密对称加密过程使用的密钥。   </p>
+<a id="more"></a>  
+<h3 id="SSL_u534F_u8BAE_u56DB_u6B21_u63E1_u624B"><a href="#SSL_u534F_u8BAE_u56DB_u6B21_u63E1_u624B" class="headerlink" title="SSL协议四次握手"></a>SSL协议四次握手</h3><blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/SSL%E5%9B%9B%E6%AC%A1%E6%8F%A1%E6%89%8B.png" alt="ssl握手流程图">   </p>
 </blockquote>
-<p>二、查看所有分支（包括远程的） git branch -a<br>其中，颜色为红色的是远程仓库的分支   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png" alt="所有分支">   </p>
-</blockquote>
-<p>三、切换本地分支 git checkout ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="切换本地分支">   </p>
-</blockquote>
-<p>四、创建本地分支 git branch ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="创建本地分支">   </p>
-</blockquote>
-<p>五、删除本地分支 git branch -d ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="删除本地分支">   </p>
-</blockquote>
-<p>六、创建本地分支与远程分支关联   </p>
-<blockquote>
-<p>$ git checkout dev origin/dev<br>说明：创建本地分支dev，并且和远程origin/dev分支关联，本地dev分支的初始化代码和远程dev分支代码一样；   </p>
-</blockquote>
-<p>七、删除远程分支   </p>
-<blockquote>
-<p>$git push origin <strong>:</strong>branchName<br>冒号前面的空格不能少，原理就是把一个空分支push到server上，相当于删除该分支；   </p>
-</blockquote>
-<ul>
-<li><strong>分支切换时可能遇到的问题</strong></li>
-</ul>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png" alt="切换问题"></p>
-</blockquote>
-<p>解决方法一：<br>-f –force，忽略更改，强制切换   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png" alt="方法一">   </p>
-</blockquote>
-<p>解决方法二：   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png" alt="方法二">  </p>
-</blockquote>
+<p><strong>总结：</strong><br>（1）生成对话密钥一共需要三个随机数。<br>（2）握手之后的对话使用”对话密钥”加密（对称加密），服务器的公钥和私钥只用于加密和解密”对话密钥”（非对称加密），无其他作用。<br>（3）服务器公钥放在服务器的数字证书之中。   </p>
+<h3 id="SSL_u534F_u8BAE_u8BE6_u7EC6_u63E1_u624B_u8FC7_u7A0B"><a href="#SSL_u534F_u8BAE_u8BE6_u7EC6_u63E1_u624B_u8FC7_u7A0B" class="headerlink" title="SSL协议详细握手过程"></a>SSL协议详细握手过程</h3><p>SSL 的握手协议非常有效的让客户和服务器之间完成相互之间的身份认证，其主要过程如下：   </p>
+<ol>
+<li>客户端的浏览器向服务器传送客户端 SSL 协议的版本号，加密算法的种类，产生的随机数，以及其他服务器和客户端之间通讯所需要的各种信息。   </li>
+<li>服务器向客户端传送 SSL 协议的版本号，加密算法的种类，随机数以及其他相关信息，同时服务器还将向客户端传送自己的证书。   </li>
+<li>客户利用服务器传过来的信息验证服务器的合法性，服务器的合法性包括：证书是否过期，发行服务器证书的 CA 是否可靠，发行者证书的公钥能否正确解开服务器证书的“发行者的数字签名”，服务器证书上的域名是否和服务器的实际域名相匹配。如果合法性验证没有通过，通讯将断开；如果合法性验证通过，将继续进行第四步。   </li>
+<li>用户端随机产生一个用于后面通讯的“对称密码”，然后用服务器的公钥（服务器的公钥从步骤②中的服务器的证书中获得）对其加密，然后将加密后的“预主密码”传给服务器。   </li>
+<li>如果服务器要求客户的身份认证（在握手过程中为可选），用户可以建立一个随机数然后对其进行数据签名，将这个含有签名的随机数和客户自己的证书以及加密过的“预主密码”一起传给服务器。   </li>
+<li>如果服务器要求客户的身份认证，服务器必须检验客户证书和签名随机数的合法性，具体的合法性验证过程包括：客户的证书使用日期是否有效，为客户提供证书的CA 是否可靠，发行CA 的公钥能否正确解开客户证书的发行 CA 的数字签名，检查客户的证书是否在证书废止列表（CRL）中。检验如果没有通过，通讯立刻中断；如果验证通过，服务器将用自己的私钥解开加密的“预主密码 ”，然后执行一系列步骤来产生主通讯密码（客户端也将通过同样的方法产生相同的主通讯密码）。   </li>
+<li>服务器和客户端用相同的主密码即“通话密码”，一个对称密钥用于 SSL 协议的安全数据通讯的加解密通讯。同时在 SSL 通讯过程中还要完成数据通讯的完整性，防止数据通讯中的任何变化。   </li>
+<li>客户端向服务器端发出信息，指明后面的数据通讯将使用的步骤⑦中的主密码为对称密钥，同时通知服务器客户端的握手过程结束。   </li>
+<li>服务器向客户端发出信息，指明后面的数据通讯将使用的步骤⑦中的主密码为对称密钥，同时通知客户端服务器端的握手过程结束。    </li>
+<li>SSL 的握手部分结束，SSL 安全通道的数据通讯开始，客户和服务器开始使用相同的对称密钥进行数据通讯，同时进行通讯完整性的检验。</li>
+</ol>
 
       
     </div>
@@ -363,9 +326,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
-          
-            <a href="/tags/github/" rel="tag">#github</a>
+            <a href="/tags/SSL，四次握手/" rel="tag">#SSL，四次握手</a>
           
         </div>
       
@@ -374,16 +335,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/" rel="next" title="git push 后后提示ssh:Could not resolve hostname github解决方法">
-                <i class="fa fa-chevron-left"></i> git push 后后提示ssh:Could not resolve hostname github解决方法
+              <a href="/2016/02/23/git学习之仓库提交及分支管理/" rel="next" title="git学习之代码仓库提交及分支管理">
+                <i class="fa fa-chevron-left"></i> git学习之代码仓库提交及分支管理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/07/SSL四次握手过程/" rel="prev" title="SSL四次握手过程">
-                SSL四次握手过程 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/07/KVO与KVC学习笔记/" rel="prev" title="KVO与KVC学习笔记">
+                KVO与KVC学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -399,10 +360,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
-     data-title="git学习之代码仓库提交及分支管理"
+        <div class="ds-share flat" data-thread-key="2016/03/07/SSL四次握手过程/"
+     data-title="SSL四次握手过程"
      data-content=""
-     data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
+     data-url="http://yoursite.com/2016/03/07/SSL四次握手过程/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -432,8 +393,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
-           data-title="git学习之代码仓库提交及分支管理" data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
+      <div class="ds-thread" data-thread-key="2016/03/07/SSL四次握手过程/"
+           data-title="SSL四次握手过程" data-url="http://yoursite.com/2016/03/07/SSL四次握手过程/">
       </div>
     
   </div>
@@ -572,7 +533,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#SSL_u534F_u8BAE_u7B80_u8FF0"><span class="nav-number">1.</span> <span class="nav-text">SSL协议简述 　　</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSL_u534F_u8BAE_u56DB_u6B21_u63E1_u624B"><span class="nav-number">2.</span> <span class="nav-text">SSL协议四次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSL_u534F_u8BAE_u8BE6_u7EC6_u63E1_u624B_u8FC7_u7A0B"><span class="nav-number">3.</span> <span class="nav-text">SSL协议详细握手过程</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

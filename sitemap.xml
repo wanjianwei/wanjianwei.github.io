@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/03/07/object-c%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-03-17T11:29:10.283Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/03/07/SSL%E5%9B%9B%E6%AC%A1%E6%8F%A1%E6%89%8B%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2016-03-17T11:23:48.466Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/03/07/KVO%E4%B8%8EKVC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-03-17T11:11:57.241Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/about/index.html</loc>
     <lastmod>2016-02-26T12:40:53.144Z</lastmod>
   </url>

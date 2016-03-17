@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,github," />
+  <meta name="keywords" content="objective——c，iOS开发," />
 
 
 
@@ -59,24 +59,34 @@
 
 
 
-<meta name="description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta name="description" content="1、所有OC对象所占的内存总是分配在“堆空间”（heap space）中，而绝不会分配在“栈”中，不能在栈中分配OC对象，这点与C++不同：   
+
+NSString    stackString；  //错误，不能在栈空间分配对象；
+
+2、使用类的向前声明（forward declaring）可以节省编译时间，也解决了两个类头文件相互引用的问题；   
+
+eg：如果有循环依赖关系，如:A–&amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git学习之代码仓库提交及分支管理">
-<meta property="og:url" content="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/index.html">
+<meta property="og:title" content="object-c学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/03/07/object-c学习笔记/index.html">
 <meta property="og:site_name" content="万建伟's Blog">
-<meta property="og:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png">
-<meta property="og:updated_time" content="2016-02-23T07:31:51.710Z">
+<meta property="og:description" content="1、所有OC对象所占的内存总是分配在“堆空间”（heap space）中，而绝不会分配在“栈”中，不能在栈中分配OC对象，这点与C++不同：   
+
+NSString    stackString；  //错误，不能在栈空间分配对象；
+
+2、使用类的向前声明（forward declaring）可以节省编译时间，也解决了两个类头文件相互引用的问题；   
+
+eg：如果有循环依赖关系，如:A–&amp;gt">
+<meta property="og:updated_time" content="2016-03-17T11:29:10.283Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git学习之代码仓库提交及分支管理">
-<meta name="twitter:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta name="twitter:title" content="object-c学习笔记">
+<meta name="twitter:description" content="1、所有OC对象所占的内存总是分配在“堆空间”（heap space）中，而绝不会分配在“栈”中，不能在栈中分配OC对象，这点与C++不同：   
+
+NSString    stackString；  //错误，不能在栈空间分配对象；
+
+2、使用类的向前声明（forward declaring）可以节省编译时间，也解决了两个类头文件相互引用的问题；   
+
+eg：如果有循环依赖关系，如:A–&amp;gt">
 
 
 
@@ -94,7 +104,7 @@
   };
 </script>
 
-  <title> git学习之代码仓库提交及分支管理 | 万建伟's Blog </title>
+  <title> object-c学习笔记 | 万建伟's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +252,7 @@
             
             
               
-                git学习之代码仓库提交及分支管理
+                object-c学习笔记
               
             
           </h1>
@@ -254,8 +264,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-23T14:33:17+08:00" content="2016-02-23">
-              2016-02-23
+            <time itemprop="dateCreated" datetime="2016-03-07T15:27:29+08:00" content="2016-03-07">
+              2016-03-07
             </time>
           </span>
 
@@ -268,8 +278,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/git指令学习/" itemprop="url" rel="index">
-                    <span itemprop="name">git指令学习</span>
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
                   </a>
                 </span>
 
@@ -284,8 +294,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/23/git学习之仓库提交及分支管理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/" itemprop="commentsCount"></span>
+                <a href="/2016/03/07/object-c学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/object-c学习笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,55 +316,18 @@
       
 
       
-        <ul>
-<li><strong>git基本命令</strong><br>$ git init　<em>初始化git</em>；<br>$ git add　<em>添加git索引，可以是文件，也可以是目录路径</em>；<br>$ git commit　<em>提交更改</em>；<br>$ git remote add origin https：//github.com/####/###　<em>与远程github的repository关联</em>；<br>$ git remote rm origin　<em>删除与远程仓库的关联</em><br>$ git push -u origin master　<em>将本地项目push到远程仓库中的master分支中，可以替换成其它分支</em>   </li>
-</ul>
-<a id="more"></a> 
-<ul>
-<li><strong>分支管理</strong></li>
-</ul>
-<p>一、查看本地分支 git branch<br>名字前有“*”的表示是当前分支   </p>
+        <p>1、所有OC对象所占的内存总是分配在“堆空间”（heap space）中，而绝不会分配在“栈”中，不能在栈中分配OC对象，这点与C++不同：   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="查看本地分支">   </p>
+<p>NSString    stackString；  //错误，不能在栈空间分配对象；</p>
 </blockquote>
-<p>二、查看所有分支（包括远程的） git branch -a<br>其中，颜色为红色的是远程仓库的分支   </p>
+<p>2、使用类的向前声明（forward declaring）可以节省编译时间，也解决了两个类头文件相互引用的问题；   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png" alt="所有分支">   </p>
+<p>eg：如果有循环依赖关系，如:A–&gt;B, B–&gt;A这样的相互依赖关系，使用#import而非include指令虽然不会导致死循环，但却意味着两个类里有一个无法被正确编译；如果使用@class在两个类的头文件中相互声明，则不会有问题。   </p>
 </blockquote>
-<p>三、切换本地分支 git checkout ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="切换本地分支">   </p>
-</blockquote>
-<p>四、创建本地分支 git branch ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="创建本地分支">   </p>
-</blockquote>
-<p>五、删除本地分支 git branch -d ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="删除本地分支">   </p>
-</blockquote>
-<p>六、创建本地分支与远程分支关联   </p>
-<blockquote>
-<p>$ git checkout dev origin/dev<br>说明：创建本地分支dev，并且和远程origin/dev分支关联，本地dev分支的初始化代码和远程dev分支代码一样；   </p>
-</blockquote>
-<p>七、删除远程分支   </p>
-<blockquote>
-<p>$git push origin <strong>:</strong>branchName<br>冒号前面的空格不能少，原理就是把一个空分支push到server上，相当于删除该分支；   </p>
-</blockquote>
-<ul>
-<li><strong>分支切换时可能遇到的问题</strong></li>
-</ul>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png" alt="切换问题"></p>
-</blockquote>
-<p>解决方法一：<br>-f –force，忽略更改，强制切换   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png" alt="方法一">   </p>
-</blockquote>
-<p>解决方法二：   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png" alt="方法二">  </p>
-</blockquote>
+<p>3、OC所有的collection拷贝都是浅拷贝，因为collection中也许会有不支持NSCopying的自定义类；</p>
+<p>4、ARC只负责管理Objective-C对象的内存，尤其要注意：CoreFoundation对象不归ARC管理，开发者必须适时调用CFRetain/CGRelease；   </p>
+<p>5、实现缓存时应选用NSCache而非NSDictionary对象。因为NSCache可以提供优雅的自动删减功能，而且是线程安全的，此外，它与字典不同，并不会拷贝键；</p>
+<p>6、计时器会保留其目标对象，等到自身“失效”后再释放此对象；调用invalidate方法可令计时器失效；执行完相关任务后，一次性的计时器也会失效。<br><strong>注意：</strong>开发者若将计时器设置为重复执行模式，那么必须自己调用invalidate方法，才能令其停止；</p>
 
       
     </div>
@@ -363,9 +336,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
-          
-            <a href="/tags/github/" rel="tag">#github</a>
+            <a href="/tags/objective——c，iOS开发/" rel="tag">#objective——c，iOS开发</a>
           
         </div>
       
@@ -374,17 +345,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/" rel="next" title="git push 后后提示ssh:Could not resolve hostname github解决方法">
-                <i class="fa fa-chevron-left"></i> git push 后后提示ssh:Could not resolve hostname github解决方法
+              <a href="/2016/03/07/KVO与KVC学习笔记/" rel="next" title="KVO与KVC学习笔记">
+                <i class="fa fa-chevron-left"></i> KVO与KVC学习笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/07/SSL四次握手过程/" rel="prev" title="SSL四次握手过程">
-                SSL四次握手过程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -399,10 +366,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
-     data-title="git学习之代码仓库提交及分支管理"
+        <div class="ds-share flat" data-thread-key="2016/03/07/object-c学习笔记/"
+     data-title="object-c学习笔记"
      data-content=""
-     data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
+     data-url="http://yoursite.com/2016/03/07/object-c学习笔记/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -432,8 +399,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
-           data-title="git学习之代码仓库提交及分支管理" data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
+      <div class="ds-thread" data-thread-key="2016/03/07/object-c学习笔记/"
+           data-title="object-c学习笔记" data-url="http://yoursite.com/2016/03/07/object-c学习笔记/">
       </div>
     
   </div>

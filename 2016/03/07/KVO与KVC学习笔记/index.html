@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,github," />
+  <meta name="keywords" content="iOS开发,objective——c," />
 
 
 
@@ -59,24 +59,18 @@
 
 
 
-<meta name="description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta name="description" content="一、KVC的基本概念Key-value coding,它是一种使用字符串标识符，间接访问对象属性的机制,而不是直接调用getter 和 setter方法。通常我们使用valueForKey 来替代getter 方法，setValue:forKey来代替setter方法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git学习之代码仓库提交及分支管理">
-<meta property="og:url" content="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/index.html">
+<meta property="og:title" content="KVO与KVC学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/03/07/KVO与KVC学习笔记/index.html">
 <meta property="og:site_name" content="万建伟's Blog">
-<meta property="og:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png">
-<meta property="og:updated_time" content="2016-02-23T07:31:51.710Z">
+<meta property="og:description" content="一、KVC的基本概念Key-value coding,它是一种使用字符串标识符，间接访问对象属性的机制,而不是直接调用getter 和 setter方法。通常我们使用valueForKey 来替代getter 方法，setValue:forKey来代替setter方法。">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/kvc1.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/kvc2.png">
+<meta property="og:updated_time" content="2016-03-17T11:11:57.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git学习之代码仓库提交及分支管理">
-<meta name="twitter:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta name="twitter:title" content="KVO与KVC学习笔记">
+<meta name="twitter:description" content="一、KVC的基本概念Key-value coding,它是一种使用字符串标识符，间接访问对象属性的机制,而不是直接调用getter 和 setter方法。通常我们使用valueForKey 来替代getter 方法，setValue:forKey来代替setter方法。">
 
 
 
@@ -94,7 +88,7 @@
   };
 </script>
 
-  <title> git学习之代码仓库提交及分支管理 | 万建伟's Blog </title>
+  <title> KVO与KVC学习笔记 | 万建伟's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +236,7 @@
             
             
               
-                git学习之代码仓库提交及分支管理
+                KVO与KVC学习笔记
               
             
           </h1>
@@ -254,8 +248,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-23T14:33:17+08:00" content="2016-02-23">
-              2016-02-23
+            <time itemprop="dateCreated" datetime="2016-03-07T15:26:35+08:00" content="2016-03-07">
+              2016-03-07
             </time>
           </span>
 
@@ -268,8 +262,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/git指令学习/" itemprop="url" rel="index">
-                    <span itemprop="name">git指令学习</span>
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
                   </a>
                 </span>
 
@@ -284,8 +278,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/23/git学习之仓库提交及分支管理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/" itemprop="commentsCount"></span>
+                <a href="/2016/03/07/KVO与KVC学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/KVO与KVC学习笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,55 +300,36 @@
       
 
       
-        <ul>
-<li><strong>git基本命令</strong><br>$ git init　<em>初始化git</em>；<br>$ git add　<em>添加git索引，可以是文件，也可以是目录路径</em>；<br>$ git commit　<em>提交更改</em>；<br>$ git remote add origin https：//github.com/####/###　<em>与远程github的repository关联</em>；<br>$ git remote rm origin　<em>删除与远程仓库的关联</em><br>$ git push -u origin master　<em>将本地项目push到远程仓库中的master分支中，可以替换成其它分支</em>   </li>
-</ul>
-<a id="more"></a> 
-<ul>
-<li><strong>分支管理</strong></li>
-</ul>
-<p>一、查看本地分支 git branch<br>名字前有“*”的表示是当前分支   </p>
+        <h3 id="u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5"><a href="#u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5" class="headerlink" title="一、KVC的基本概念"></a>一、KVC的基本概念</h3><p>Key-value coding,它是一种使用字符串标识符，间接访问对象属性的机制,而不是直接调用getter 和 setter方法。通常我们使用valueForKey 来替代getter 方法，setValue:forKey来代替setter方法。   </p>
+<a id="more"></a>
+<p>下面是使用KVC 和 不使用 KVC的代码对比   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="查看本地分支">   </p>
+<p>Persion *persion =  [ [Persion alloc] init ];<br>//不使用KVC<br>persion.name = @”hufeng” ;<br>//使用KVC的写法<br>[persion  setValue:@”hufeng” forKey:@”name”];   </p>
 </blockquote>
-<p>二、查看所有分支（包括远程的） git branch -a<br>其中，颜色为红色的是远程仓库的分支   </p>
+<p>下面举个复杂点的例子：我们有一个人 这个人有一个手机类 这个手机类 有一个电池类 我们要获取这个电池类 比之前复杂了吧。<br><strong>没有KVC</strong>   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png" alt="所有分支">   </p>
+<p>Persion<em>persion =  [ [Persion alloc] init ];<br>Phone</em>phone = persion.phone;<br>Battery*battery = phone.battery;    </p>
 </blockquote>
-<p>三、切换本地分支 git checkout ###   </p>
+<p><strong>使用KVC</strong>   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="切换本地分支">   </p>
+<p>Battery *battery = [persion valueForKeyPath: @”phone.battery” ];   </p>
 </blockquote>
-<p>四、创建本地分支 git branch ###   </p>
+<p><em>注意：valueForKeyPath 里面的值是区分大小写的，你如果写出Phone.Battery 是不行的</em>   </p>
+<h3 id="u4E8C_u3001KVC_u4E0E_u5C5E_u6027_u5408_u6210_u5B58_u53D6_u65B9_u6CD5_u7684_u533A_u522B"><a href="#u4E8C_u3001KVC_u4E0E_u5C5E_u6027_u5408_u6210_u5B58_u53D6_u65B9_u6CD5_u7684_u533A_u522B" class="headerlink" title="二、KVC与属性合成存取方法的区别"></a>二、KVC与属性合成存取方法的区别</h3><p>KVC 不但能够赋值，而且还能破坏属性值的只读特性。更重要的是KVC 有自动装箱（自动类型转换）的功能，我们不需要去转换类型了。由于开发过程中数据领域是字符串的天下，所以这个自动装箱的功能的确是极好的。   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="创建本地分支">   </p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/kvc1.png" alt="例子KVC1">   </p>
 </blockquote>
-<p>五、删除本地分支 git branch -d ###   </p>
+<p>从上可以看出 ，KVC绕过了属性的attribute设置，可以给只读属性值赋值，也可以给NSNumber赋字符串；   </p>
+<h3 id="u4E09_u3001_u652F_u6301_u952E_u503C_u8DEF_u5F84"><a href="#u4E09_u3001_u652F_u6301_u952E_u503C_u8DEF_u5F84" class="headerlink" title="三、支持键值路径"></a>三、支持键值路径</h3><p>什么叫支持键值路径？说白了就是支持嵌套。假如现在有一个书籍类，类中包含了书籍的名称name。书籍可以被Person所拥有（就是可以作为person的属性）   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="删除本地分支">   </p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/kvc2.png" alt="kvc2">;   </p>
 </blockquote>
-<p>六、创建本地分支与远程分支关联   </p>
+<p>这里的key直接使用点局分开就好了，注意一下：这里使用的时keyPath,当然在 <strong>二、KVC与属性合成存取方法的区别</strong> 中我们也可以使用keyPath,只不过再不必要的情况下使用keyPath会浪费性能而已。   </p>
+<h3 id="u56DB_u3001_u652F_u6301_u64CD_u4F5C_u7B26"><a href="#u56DB_u3001_u652F_u6301_u64CD_u4F5C_u7B26" class="headerlink" title="四、支持操作符"></a>四、支持操作符</h3><p>假如我们有10个字符串，我们想求出这10个字符串的总长度，我们可以使用KVC提供的操作符。   </p>
 <blockquote>
-<p>$ git checkout dev origin/dev<br>说明：创建本地分支dev，并且和远程origin/dev分支关联，本地dev分支的初始化代码和远程dev分支代码一样；   </p>
+<p>NSArray *books=@[@”鸟哥烧烤私房菜”,@”程序员摊煎饼宝典”,@”麻辣烫基础教程”];<br>NSLog(@”%@”,[books valueForKeyPath:@”@sum.length”]);   </p>
 </blockquote>
-<p>七、删除远程分支   </p>
-<blockquote>
-<p>$git push origin <strong>:</strong>branchName<br>冒号前面的空格不能少，原理就是把一个空分支push到server上，相当于删除该分支；   </p>
-</blockquote>
-<ul>
-<li><strong>分支切换时可能遇到的问题</strong></li>
-</ul>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png" alt="切换问题"></p>
-</blockquote>
-<p>解决方法一：<br>-f –force，忽略更改，强制切换   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png" alt="方法一">   </p>
-</blockquote>
-<p>解决方法二：   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png" alt="方法二">  </p>
-</blockquote>
+<p>这里的@sum 是KVC 提供的，不是我们写的。像这样的函数共有5个@avg，@count，@max，@min，@sum。我们直接用就可以了。但是据说效率比用for循环慢。我没有测试过，感兴趣的话你可以测试一下。</p>
 
       
     </div>
@@ -363,9 +338,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
+            <a href="/tags/iOS开发/" rel="tag">#iOS开发</a>
           
-            <a href="/tags/github/" rel="tag">#github</a>
+            <a href="/tags/objective——c/" rel="tag">#objective——c</a>
           
         </div>
       
@@ -374,16 +349,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/" rel="next" title="git push 后后提示ssh:Could not resolve hostname github解决方法">
-                <i class="fa fa-chevron-left"></i> git push 后后提示ssh:Could not resolve hostname github解决方法
+              <a href="/2016/03/07/SSL四次握手过程/" rel="next" title="SSL四次握手过程">
+                <i class="fa fa-chevron-left"></i> SSL四次握手过程
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/07/SSL四次握手过程/" rel="prev" title="SSL四次握手过程">
-                SSL四次握手过程 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/07/object-c学习笔记/" rel="prev" title="object-c学习笔记">
+                object-c学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -399,10 +374,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
-     data-title="git学习之代码仓库提交及分支管理"
+        <div class="ds-share flat" data-thread-key="2016/03/07/KVO与KVC学习笔记/"
+     data-title="KVO与KVC学习笔记"
      data-content=""
-     data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
+     data-url="http://yoursite.com/2016/03/07/KVO与KVC学习笔记/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -432,8 +407,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
-           data-title="git学习之代码仓库提交及分支管理" data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
+      <div class="ds-thread" data-thread-key="2016/03/07/KVO与KVC学习笔记/"
+           data-title="KVO与KVC学习笔记" data-url="http://yoursite.com/2016/03/07/KVO与KVC学习笔记/">
       </div>
     
   </div>
@@ -572,7 +547,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5"><span class="nav-number">1.</span> <span class="nav-text">一、KVC的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E8C_u3001KVC_u4E0E_u5C5E_u6027_u5408_u6210_u5B58_u53D6_u65B9_u6CD5_u7684_u533A_u522B"><span class="nav-number">2.</span> <span class="nav-text">二、KVC与属性合成存取方法的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E09_u3001_u652F_u6301_u952E_u503C_u8DEF_u5F84"><span class="nav-number">3.</span> <span class="nav-text">三、支持键值路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u56DB_u3001_u652F_u6301_u64CD_u4F5C_u7B26"><span class="nav-number">4.</span> <span class="nav-text">四、支持操作符</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

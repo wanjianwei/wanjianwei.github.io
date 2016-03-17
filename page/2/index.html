@@ -247,6 +247,360 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/18/MySQL的事务及回滚简述/" itemprop="url">
+                  MySQL的事务及回滚简述
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-18T16:59:11+08:00" content="2016-02-18">
+              2016-02-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL数据库开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/18/MySQL的事务及回滚简述/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/MySQL的事务及回滚简述/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="u4F55_u4E3A_u4E8B_u52A1"><a href="#u4F55_u4E3A_u4E8B_u52A1" class="headerlink" title="何为事务"></a>何为事务</h3><p>　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。   </p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/18/MySQL的事务及回滚简述/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/17/MySQL数据库学习总结/" itemprop="url">
+                  MySQL数据库学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-17T14:35:23+08:00" content="2016-02-17">
+              2016-02-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL数据库开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/17/MySQL数据库学习总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/17/MySQL数据库学习总结/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="u5E38_u7528_u5B57_u6BB5_u7C7B_u578B_28type_29"><a href="#u5E38_u7528_u5B57_u6BB5_u7C7B_u578B_28type_29" class="headerlink" title="常用字段类型(type)"></a>常用字段类型(type)</h3><p>MySQL中的数据类型大致可分为：日期和时间，数值以及字符串。各类型的详细介绍如下所示   </p>
+<ul>
+<li><strong>日期和时间数据类型</strong>   </li>
+</ul>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4.jpg" alt="日期时间">   </p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/17/MySQL数据库学习总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/16/Mysql数据库的导入与导出/" itemprop="url">
+                  Mysql数据库的导入与导出
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-16T20:54:46+08:00" content="2016-02-16">
+              2016-02-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL数据库开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/16/Mysql数据库的导入与导出/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/Mysql数据库的导入与导出/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
+<ul>
+<li>一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
+</ul>
+<blockquote>
+<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/ｏputfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
+</blockquote>
+<ul>
+<li>二、导出某个表，命令格式如下：</li>
+</ul>
+<blockquote>
+<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>　参数解释如上所示；<br>　eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/16/Mysql数据库的导入与导出/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/16/Mysql数据库之用户管理及密码修改/" itemprop="url">
                   Mysql数据库之用户管理及密码修改
                 </a>
@@ -463,353 +817,12 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/07/hexo语法/" itemprop="url">
-                  hexo常用命令总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-07T13:59:28+08:00" content="2016-02-07">
-              2016-02-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/07/hexo语法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/07/hexo语法/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="u5E38_u7528_u7B80_u5199_u547D_u4EE4"><a href="#u5E38_u7528_u7B80_u5199_u547D_u4EE4" class="headerlink" title="常用简写命令"></a>常用简写命令</h3><blockquote>
-<p>hexo　n　“filename”　==　hexo　new　“filename”　==　hexo　new　post　“filename”　<em>#该命令执行后会在./source/_post目录下生成一个名为“filename”的md文件，可供我们输入博客内容</em>；<br> hexo　p　==　hexo　publish　<em>#生成草稿</em>；<br> hexo　g　==　hexo　generate　<em>#在本地生成静态网页至public目录下</em>；<br> hexo　s　==　hexo　server　<em>#启动本地服务预览，打开浏览器，输入“http：//localhost：4000”即可查看编辑效果</em>；<br> hexo　ｄ　==　hexo　deploy　<em>#部署到github等云空间</em>；<br> hexo　new　page　“pageName”　<em>#新建页面，该命令执行后会在source目录下生成一个已“pageName”命名的文件夹</em>；  </p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/07/hexo语法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/03/markdown-note/" itemprop="url">
-                  markdown语法教程
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-03T16:15:27+08:00" content="2016-02-03">
-              2016-02-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/转载/" itemprop="url" rel="index">
-                    <span itemprop="name">转载</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/03/markdown-note/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/03/markdown-note/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/03/markdown-note/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/03/hexo-note/" itemprop="url">
-                  Hexo+github搭建个人博客教程
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-03T16:15:27+08:00" content="2016-02-03">
-              2016-02-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/03/hexo-note/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/03/hexo-note/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/03/hexo-note/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -850,7 +863,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -858,7 +871,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -867,7 +880,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -251,6 +251,351 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/07/object-c学习笔记/" itemprop="url">
+                  object-c学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-07T15:27:29+08:00" content="2016-03-07">
+              2016-03-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/07/object-c学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/object-c学习笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1、所有OC对象所占的内存总是分配在“堆空间”（heap space）中，而绝不会分配在“栈”中，不能在栈中分配OC对象，这点与C++不同：   </p>
+<blockquote>
+<p>NSString    stackString；  //错误，不能在栈空间分配对象；</p>
+</blockquote>
+<p>2、使用类的向前声明（forward declaring）可以节省编译时间，也解决了两个类头文件相互引用的问题；   </p>
+<blockquote>
+<p>eg：如果有循环依赖关系，如:A–&gt;B, B–&gt;A这样的相互依赖关系，使用#import而非include指令虽然不会导致死循环，但却意味着两个类里有一个无法被正确编译；如果使用@class在两个类的头文件中相互声明，则不会有问题。   </p>
+</blockquote>
+<p>3、OC所有的collection拷贝都是浅拷贝，因为collection中也许会有不支持NSCopying的自定义类；</p>
+<p>4、ARC只负责管理Objective-C对象的内存，尤其要注意：CoreFoundation对象不归ARC管理，开发者必须适时调用CFRetain/CGRelease；   </p>
+<p>5、实现缓存时应选用NSCache而非NSDictionary对象。因为NSCache可以提供优雅的自动删减功能，而且是线程安全的，此外，它与字典不同，并不会拷贝键；</p>
+<p>6、计时器会保留其目标对象，等到自身“失效”后再释放此对象；调用invalidate方法可令计时器失效；执行完相关任务后，一次性的计时器也会失效。<br><strong>注意：</strong>开发者若将计时器设置为重复执行模式，那么必须自己调用invalidate方法，才能令其停止；</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/07/KVO与KVC学习笔记/" itemprop="url">
+                  KVO与KVC学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-07T15:26:35+08:00" content="2016-03-07">
+              2016-03-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/07/KVO与KVC学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/KVO与KVC学习笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5"><a href="#u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5" class="headerlink" title="一、KVC的基本概念"></a>一、KVC的基本概念</h3><p>Key-value coding,它是一种使用字符串标识符，间接访问对象属性的机制,而不是直接调用getter 和 setter方法。通常我们使用valueForKey 来替代getter 方法，setValue:forKey来代替setter方法。   </p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/07/KVO与KVC学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/07/SSL四次握手过程/" itemprop="url">
+                  SSL四次握手过程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-07T15:24:50+08:00" content="2016-03-07">
+              2016-03-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机网络</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/07/SSL四次握手过程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/SSL四次握手过程/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="SSL_u534F_u8BAE_u7B80_u8FF0"><a href="#SSL_u534F_u8BAE_u7B80_u8FF0" class="headerlink" title="SSL协议简述"></a>SSL协议简述 　　</h3><p>为了便于更好的认识和理解 SSL 协议，这里着重介绍 SSL 协议的握手协议。SSL 协议既用到了公钥加密技术(非对称加密)又用到了对称加密技术，SSL对传输内容的加密是采用的对称加密，然后对对称加密的密钥使用公钥进行非对称加密。这样做的好处是，对称加密技术比公钥加密技术的速度快，可用来加密较大的传输内容， 公钥加密技术相对较慢，提供了更好的身份认证技术，可用来加密对称加密过程使用的密钥。   </p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/07/SSL四次握手过程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/23/git学习之仓库提交及分支管理/" itemprop="url">
                   git学习之代码仓库提交及分支管理
                 </a>
@@ -462,366 +807,12 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/18/MySQL的事务及回滚简述/" itemprop="url">
-                  MySQL的事务及回滚简述
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-18T16:59:11+08:00" content="2016-02-18">
-              2016-02-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL数据库开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/18/MySQL的事务及回滚简述/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/MySQL的事务及回滚简述/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="u4F55_u4E3A_u4E8B_u52A1"><a href="#u4F55_u4E3A_u4E8B_u52A1" class="headerlink" title="何为事务"></a>何为事务</h3><p>　事务是指逻辑上的一组操作，组成这组操作的各个单元，要不全成功要不全失败。 MySQL数据库的事务默认是自动提交的， 也就是发一条 sql 它就执行一条。如果想多条 sql 放在一个事务中执行，则需要使用事务进行处理。当我们开启一个事务，并且没有提交，mysql 会自动回滚事务。或者我们使用 rollback 命令手动回滚事务。   </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/18/MySQL的事务及回滚简述/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/17/MySQL数据库学习总结/" itemprop="url">
-                  MySQL数据库学习笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-17T14:35:23+08:00" content="2016-02-17">
-              2016-02-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL数据库开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/17/MySQL数据库学习总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/17/MySQL数据库学习总结/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="u5E38_u7528_u5B57_u6BB5_u7C7B_u578B_28type_29"><a href="#u5E38_u7528_u5B57_u6BB5_u7C7B_u578B_28type_29" class="headerlink" title="常用字段类型(type)"></a>常用字段类型(type)</h3><p>MySQL中的数据类型大致可分为：日期和时间，数值以及字符串。各类型的详细介绍如下所示   </p>
-<ul>
-<li><strong>日期和时间数据类型</strong>   </li>
-</ul>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/mysql%E4%B9%8B%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4.jpg" alt="日期时间">   </p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/17/MySQL数据库学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/16/Mysql数据库的导入与导出/" itemprop="url">
-                  Mysql数据库的导入与导出
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-16T20:54:46+08:00" content="2016-02-16">
-              2016-02-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MySQL数据库开发/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL数据库开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/16/Mysql数据库的导入与导出/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/Mysql数据库的导入与导出/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="u6570_u636E_u5E93_u5BFC_u51FA"><a href="#u6570_u636E_u5E93_u5BFC_u51FA" class="headerlink" title="数据库导出"></a>数据库导出</h3><p><strong>数据库的导出无需登录MySQL服务器</strong> </p>
-<ul>
-<li>一、导出整个数据库，命令格式如下，如果导出的数据库在本地，则-h（服务器地址）参数可以不用：   </li>
-</ul>
-<blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p <em>password</em>　数据库名 &gt; 目录/ｏputfile_name.sql<br>　h参数表示远程服务器地址，若导出的是本地数据库，可不添加；<br>　u参数表示用户名；<br>　p参数表示用户密码；<br>　eg：mysqldump -h120.25.12.23 -uwjw -pwjw database1 &gt; /home/wanjianwei/database.sql  </p>
-</blockquote>
-<ul>
-<li>二、导出某个表，命令格式如下：</li>
-</ul>
-<blockquote>
-<p>　$mysqldump　-h <em>serverIp</em>　-u <em>username</em>　-p<em>password</em> 数据库名 表名 &gt; 目录/outfile_name.sql<br>　参数解释如上所示；<br>　eg:mysqldump -uwjw -pwjw database1 table1 &gt; /home/wanjianwei/database1.sql   </p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/16/Mysql数据库的导入与导出/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -862,7 +853,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -870,7 +861,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -879,7 +870,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

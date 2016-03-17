@@ -4,7 +4,7 @@
   <subtitle><![CDATA[从心所愿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-23T07:31:51.710Z</updated>
+  <updated>2016-03-17T11:29:10.283Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,124 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[object-c学习笔记]]></title>
+    <link href="http://yoursite.com/2016/03/07/object-c%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/03/07/object-c学习笔记/</id>
+    <published>2016-03-07T07:27:29.000Z</published>
+    <updated>2016-03-17T11:29:10.283Z</updated>
+    <content type="html"><![CDATA[<p>1、所有OC对象所占的内存总是分配在“堆空间”（heap space）中，而绝不会分配在“栈”中，不能在栈中分配OC对象，这点与C++不同：   </p>
+<blockquote>
+<p>NSString    stackString；  //错误，不能在栈空间分配对象；</p>
+</blockquote>
+<p>2、使用类的向前声明（forward declaring）可以节省编译时间，也解决了两个类头文件相互引用的问题；   </p>
+<blockquote>
+<p>eg：如果有循环依赖关系，如:A–&gt;B, B–&gt;A这样的相互依赖关系，使用#import而非include指令虽然不会导致死循环，但却意味着两个类里有一个无法被正确编译；如果使用@class在两个类的头文件中相互声明，则不会有问题。   </p>
+</blockquote>
+<p>3、OC所有的collection拷贝都是浅拷贝，因为collection中也许会有不支持NSCopying的自定义类；</p>
+<p>4、ARC只负责管理Objective-C对象的内存，尤其要注意：CoreFoundation对象不归ARC管理，开发者必须适时调用CFRetain/CGRelease；   </p>
+<p>5、实现缓存时应选用NSCache而非NSDictionary对象。因为NSCache可以提供优雅的自动删减功能，而且是线程安全的，此外，它与字典不同，并不会拷贝键；</p>
+<p>6、计时器会保留其目标对象，等到自身“失效”后再释放此对象；调用invalidate方法可令计时器失效；执行完相关任务后，一次性的计时器也会失效。<br><strong>注意：</strong>开发者若将计时器设置为重复执行模式，那么必须自己调用invalidate方法，才能令其停止；</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>1、所有OC对象所占的内存总是分配在“堆空间”（heap space）中，而绝不会分配在“栈”中，不能在栈中分配OC对象，这点与C++不同：   </p>
+<blockquote>
+<p>NSString    stackString；  //错误，不能在栈空间分配对象；<]]>
+    </summary>
+    
+      <category term="objective——c，iOS开发" scheme="http://yoursite.com/tags/objective%E2%80%94%E2%80%94c%EF%BC%8CiOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[KVO与KVC学习笔记]]></title>
+    <link href="http://yoursite.com/2016/03/07/KVO%E4%B8%8EKVC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/03/07/KVO与KVC学习笔记/</id>
+    <published>2016-03-07T07:26:35.000Z</published>
+    <updated>2016-03-17T11:11:57.241Z</updated>
+    <content type="html"><![CDATA[<h3 id="u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5"><a href="#u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5" class="headerlink" title="一、KVC的基本概念"></a>一、KVC的基本概念</h3><p>Key-value coding,它是一种使用字符串标识符，间接访问对象属性的机制,而不是直接调用getter 和 setter方法。通常我们使用valueForKey 来替代getter 方法，setValue:forKey来代替setter方法。   </p>
+<a id="more"></a>
+<p>下面是使用KVC 和 不使用 KVC的代码对比   </p>
+<blockquote>
+<p>Persion *persion =  [ [Persion alloc] init ];<br>//不使用KVC<br>persion.name = @”hufeng” ;<br>//使用KVC的写法<br>[persion  setValue:@”hufeng” forKey:@”name”];   </p>
+</blockquote>
+<p>下面举个复杂点的例子：我们有一个人 这个人有一个手机类 这个手机类 有一个电池类 我们要获取这个电池类 比之前复杂了吧。<br><strong>没有KVC</strong>   </p>
+<blockquote>
+<p>Persion<em>persion =  [ [Persion alloc] init ];<br>Phone</em>phone = persion.phone;<br>Battery*battery = phone.battery;    </p>
+</blockquote>
+<p><strong>使用KVC</strong>   </p>
+<blockquote>
+<p>Battery *battery = [persion valueForKeyPath: @”phone.battery” ];   </p>
+</blockquote>
+<p><em>注意：valueForKeyPath 里面的值是区分大小写的，你如果写出Phone.Battery 是不行的</em>   </p>
+<h3 id="u4E8C_u3001KVC_u4E0E_u5C5E_u6027_u5408_u6210_u5B58_u53D6_u65B9_u6CD5_u7684_u533A_u522B"><a href="#u4E8C_u3001KVC_u4E0E_u5C5E_u6027_u5408_u6210_u5B58_u53D6_u65B9_u6CD5_u7684_u533A_u522B" class="headerlink" title="二、KVC与属性合成存取方法的区别"></a>二、KVC与属性合成存取方法的区别</h3><p>KVC 不但能够赋值，而且还能破坏属性值的只读特性。更重要的是KVC 有自动装箱（自动类型转换）的功能，我们不需要去转换类型了。由于开发过程中数据领域是字符串的天下，所以这个自动装箱的功能的确是极好的。   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/kvc1.png" alt="例子KVC1">   </p>
+</blockquote>
+<p>从上可以看出 ，KVC绕过了属性的attribute设置，可以给只读属性值赋值，也可以给NSNumber赋字符串；   </p>
+<h3 id="u4E09_u3001_u652F_u6301_u952E_u503C_u8DEF_u5F84"><a href="#u4E09_u3001_u652F_u6301_u952E_u503C_u8DEF_u5F84" class="headerlink" title="三、支持键值路径"></a>三、支持键值路径</h3><p>什么叫支持键值路径？说白了就是支持嵌套。假如现在有一个书籍类，类中包含了书籍的名称name。书籍可以被Person所拥有（就是可以作为person的属性）   </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/kvc2.png" alt="kvc2">;   </p>
+</blockquote>
+<p>这里的key直接使用点局分开就好了，注意一下：这里使用的时keyPath,当然在 <strong>二、KVC与属性合成存取方法的区别</strong> 中我们也可以使用keyPath,只不过再不必要的情况下使用keyPath会浪费性能而已。   </p>
+<h3 id="u56DB_u3001_u652F_u6301_u64CD_u4F5C_u7B26"><a href="#u56DB_u3001_u652F_u6301_u64CD_u4F5C_u7B26" class="headerlink" title="四、支持操作符"></a>四、支持操作符</h3><p>假如我们有10个字符串，我们想求出这10个字符串的总长度，我们可以使用KVC提供的操作符。   </p>
+<blockquote>
+<p>NSArray *books=@[@”鸟哥烧烤私房菜”,@”程序员摊煎饼宝典”,@”麻辣烫基础教程”];<br>NSLog(@”%@”,[books valueForKeyPath:@”@sum.length”]);   </p>
+</blockquote>
+<p>这里的@sum 是KVC 提供的，不是我们写的。像这样的函数共有5个@avg，@count，@max，@min，@sum。我们直接用就可以了。但是据说效率比用for循环慢。我没有测试过，感兴趣的话你可以测试一下。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5"><a href="#u4E00_u3001KVC_u7684_u57FA_u672C_u6982_u5FF5" class="headerlink" title="一、KVC的基本概念"></a>一、KVC的基本概念</h3><p>Key-value coding,它是一种使用字符串标识符，间接访问对象属性的机制,而不是直接调用getter 和 setter方法。通常我们使用valueForKey 来替代getter 方法，setValue:forKey来代替setter方法。   </p>]]>
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="objective——c" scheme="http://yoursite.com/tags/objective%E2%80%94%E2%80%94c/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[SSL四次握手过程]]></title>
+    <link href="http://yoursite.com/2016/03/07/SSL%E5%9B%9B%E6%AC%A1%E6%8F%A1%E6%89%8B%E8%BF%87%E7%A8%8B/"/>
+    <id>http://yoursite.com/2016/03/07/SSL四次握手过程/</id>
+    <published>2016-03-07T07:24:50.000Z</published>
+    <updated>2016-03-17T11:23:48.466Z</updated>
+    <content type="html"><![CDATA[<h3 id="SSL_u534F_u8BAE_u7B80_u8FF0"><a href="#SSL_u534F_u8BAE_u7B80_u8FF0" class="headerlink" title="SSL协议简述"></a>SSL协议简述 　　</h3><p>为了便于更好的认识和理解 SSL 协议，这里着重介绍 SSL 协议的握手协议。SSL 协议既用到了公钥加密技术(非对称加密)又用到了对称加密技术，SSL对传输内容的加密是采用的对称加密，然后对对称加密的密钥使用公钥进行非对称加密。这样做的好处是，对称加密技术比公钥加密技术的速度快，可用来加密较大的传输内容， 公钥加密技术相对较慢，提供了更好的身份认证技术，可用来加密对称加密过程使用的密钥。   </p>
+<a id="more"></a>  
+<h3 id="SSL_u534F_u8BAE_u56DB_u6B21_u63E1_u624B"><a href="#SSL_u534F_u8BAE_u56DB_u6B21_u63E1_u624B" class="headerlink" title="SSL协议四次握手"></a>SSL协议四次握手</h3><blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/SSL%E5%9B%9B%E6%AC%A1%E6%8F%A1%E6%89%8B.png" alt="ssl握手流程图">   </p>
+</blockquote>
+<p><strong>总结：</strong><br>（1）生成对话密钥一共需要三个随机数。<br>（2）握手之后的对话使用”对话密钥”加密（对称加密），服务器的公钥和私钥只用于加密和解密”对话密钥”（非对称加密），无其他作用。<br>（3）服务器公钥放在服务器的数字证书之中。   </p>
+<h3 id="SSL_u534F_u8BAE_u8BE6_u7EC6_u63E1_u624B_u8FC7_u7A0B"><a href="#SSL_u534F_u8BAE_u8BE6_u7EC6_u63E1_u624B_u8FC7_u7A0B" class="headerlink" title="SSL协议详细握手过程"></a>SSL协议详细握手过程</h3><p>SSL 的握手协议非常有效的让客户和服务器之间完成相互之间的身份认证，其主要过程如下：   </p>
+<ol>
+<li>客户端的浏览器向服务器传送客户端 SSL 协议的版本号，加密算法的种类，产生的随机数，以及其他服务器和客户端之间通讯所需要的各种信息。   </li>
+<li>服务器向客户端传送 SSL 协议的版本号，加密算法的种类，随机数以及其他相关信息，同时服务器还将向客户端传送自己的证书。   </li>
+<li>客户利用服务器传过来的信息验证服务器的合法性，服务器的合法性包括：证书是否过期，发行服务器证书的 CA 是否可靠，发行者证书的公钥能否正确解开服务器证书的“发行者的数字签名”，服务器证书上的域名是否和服务器的实际域名相匹配。如果合法性验证没有通过，通讯将断开；如果合法性验证通过，将继续进行第四步。   </li>
+<li>用户端随机产生一个用于后面通讯的“对称密码”，然后用服务器的公钥（服务器的公钥从步骤②中的服务器的证书中获得）对其加密，然后将加密后的“预主密码”传给服务器。   </li>
+<li>如果服务器要求客户的身份认证（在握手过程中为可选），用户可以建立一个随机数然后对其进行数据签名，将这个含有签名的随机数和客户自己的证书以及加密过的“预主密码”一起传给服务器。   </li>
+<li>如果服务器要求客户的身份认证，服务器必须检验客户证书和签名随机数的合法性，具体的合法性验证过程包括：客户的证书使用日期是否有效，为客户提供证书的CA 是否可靠，发行CA 的公钥能否正确解开客户证书的发行 CA 的数字签名，检查客户的证书是否在证书废止列表（CRL）中。检验如果没有通过，通讯立刻中断；如果验证通过，服务器将用自己的私钥解开加密的“预主密码 ”，然后执行一系列步骤来产生主通讯密码（客户端也将通过同样的方法产生相同的主通讯密码）。   </li>
+<li>服务器和客户端用相同的主密码即“通话密码”，一个对称密钥用于 SSL 协议的安全数据通讯的加解密通讯。同时在 SSL 通讯过程中还要完成数据通讯的完整性，防止数据通讯中的任何变化。   </li>
+<li>客户端向服务器端发出信息，指明后面的数据通讯将使用的步骤⑦中的主密码为对称密钥，同时通知服务器客户端的握手过程结束。   </li>
+<li>服务器向客户端发出信息，指明后面的数据通讯将使用的步骤⑦中的主密码为对称密钥，同时通知客户端服务器端的握手过程结束。    </li>
+<li>SSL 的握手部分结束，SSL 安全通道的数据通讯开始，客户和服务器开始使用相同的对称密钥进行数据通讯，同时进行通讯完整性的检验。</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="SSL_u534F_u8BAE_u7B80_u8FF0"><a href="#SSL_u534F_u8BAE_u7B80_u8FF0" class="headerlink" title="SSL协议简述"></a>SSL协议简述 　　</h3><p>为了便于更好的认识和理解 SSL 协议，这里着重介绍 SSL 协议的握手协议。SSL 协议既用到了公钥加密技术(非对称加密)又用到了对称加密技术，SSL对传输内容的加密是采用的对称加密，然后对对称加密的密钥使用公钥进行非对称加密。这样做的好处是，对称加密技术比公钥加密技术的速度快，可用来加密较大的传输内容， 公钥加密技术相对较慢，提供了更好的身份认证技术，可用来加密对称加密过程使用的密钥。   </p>]]>
+    
+    </summary>
+    
+      <category term="SSL，四次握手" scheme="http://yoursite.com/tags/SSL%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8F%A1%E6%89%8B/"/>
+    
+      <category term="计算机网络" scheme="http://yoursite.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[git学习之代码仓库提交及分支管理]]></title>
@@ -630,6 +748,104 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Hexo+github搭建个人博客教程]]></title>
+    <link href="http://yoursite.com/2016/02/03/hexo-note/"/>
+    <id>http://yoursite.com/2016/02/03/hexo-note/</id>
+    <published>2016-02-03T08:15:27.000Z</published>
+    <updated>2016-02-07T07:19:51.034Z</updated>
+    <content type="html"><![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
+</blockquote>
+<a id="more"></a>
+<h3 id="u5B89_u88C5_u6B65_u9AA4"><a href="#u5B89_u88C5_u6B65_u9AA4" class="headerlink" title="安装步骤"></a>安装步骤</h3><ul>
+<li>一、下载并安装<a href="http://git-scm.com/download/" target="_blank" rel="external">Git</a>  </li>
+<li>二、下载并安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>三、在上述安装完成后，在window下打开cmd，输入如下命令，利用npm命令安装hexo  </li>
+</ul>
+<blockquote>
+<p>npm install -g hexo</p>
+</blockquote>
+<ul>
+<li>四、安装完成后，选择某个盘符下建立一个文件夹（比如在D盘建立一个文件夹，命名为HEXO）用来存放建立个人博客所需要的所有文件，并进入该文件夹，在任意位置单击鼠标右键，选择“Git　Bash　here”，打开Git　bash，输入“hexo　init”，来初始化文件夹，成功后，重新进入文件夹，会发现里面已经有文件填充了。</li>
+</ul>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo2.jpg" alt="wenjainjia">  </p>
+<ul>
+<li>deploy_git：执行hexo　deploy命令部署到Github上的内容目录</li>
+<li>public：执行hexo　generate命令，输出的静态网页内容目录</li>
+<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
+<li>scripts：扩展脚本目录，这里可以自定义一些JavaScript脚本</li>
+<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。  <blockquote>
+<ul>
+<li>_drafts：存储草稿文章的目录  </li>
+<li>_posts：存储发布文章的目录</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>themes：主题文件目录</li>
+<li>_config.yml：全局配置文件</li>
+<li>package.json：应用程序数据，指明hexo的版本等信息  </li>
+</ul>
+</blockquote>
+<ul>
+<li>五、登录自己的github账号（没有的可<a href="https://github.com/" target="_blank" rel="external">在此</a>注册），新建一个repository，并用自己的账号名来命名。比如我的github账号为wanjianwei，则我刚刚建立的repository名字应该是wanjianwei.github.io  </li>
+</ul>
+<h3 id="u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A"><a href="#u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A" class="headerlink" title="与github pages进行绑定"></a>与github pages进行绑定</h3><p>　　在完成以上安装步骤后，我们事实上已经在本地搭建了一个简单的hexo博客站点，进入存放hexo相关文件的文件夹，点击鼠标右键-&gt;”Git Bash here”,分别输入以下命令后，即可打开浏览器，访问“<a href="http://localhost:4000”" target="_blank" rel="external">http://localhost:4000”</a>  即可打开hexo的Hello　World界面</p>
+<blockquote>
+<p>hexo　generate;<br>hexo server</p>
+</blockquote>
+<p>只不过此事的hexo静态博客只能在本地访问，为了可以让其他人通过网络访问我们的博客，我们必须将hexo静态博客发布到云空间上，在此我选择的是github。我们进入存放hexo相关文件的文件夹类，打开站点配置文件_config.yml，按下图所示进行配置</p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo3.jpg" alt="hexo_config.yml"></p>
+</blockquote>
+<p>上述的repository要换成自己新建的repository的url，配置完成后，我们即可通过指令将我们在本地生成的hexo静态博客推送到github上了。接下来，我们需要先熟悉下hexo的一些常用<a href="http://www.tuicool.com/articles/yUreInQ" target="_blank" rel="external">指令</a></p>
+<h3 id="u914D_u7F6EHexo_u4E3B_u9898"><a href="#u914D_u7F6EHexo_u4E3B_u9898" class="headerlink" title="配置Hexo主题"></a>配置Hexo主题</h3><p>　　hexo默认自带的主题外观如果无法满足我们的需求，我们可以在github上搜索符合我们需求的主题，在此推荐<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">hexo-theme-next</a>,安装方法和配置方法在其官网上都有详细描述（<a href="http://theme-next.iissnan.com/five-minutes-setup.html" target="_blank" rel="external">点击查看</a>）。  </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo4.jpg" alt="安装教程截图"></p>
+</blockquote>
+<p>它自带有三种布局主题分别为Muse，Mist，Pisces；楼主采用的是Pisces，效果在上文中已展示。需要注意的是第三方服务的安装，比如评论，统计博客浏览情况，这其实也不复杂，在Hexo的官网上也有专门的介绍(<a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">点击查看</a>)。<br>　　在完成上述步骤后，我们就基本为自己搭建了一个独立的个人博客网站，当然，一开始我们会觉得有些不完美，但随着使用的深入，我们都能找到相应解决的方法，逐渐把它改进成自己想要的样子。在改进完善的过程中，往往需要下载一些插件，这里提供一个集合了几乎所有hexo第三方插件的地址，大家如果有需要可以按需要下载<a href="https://hexo.io/plugins/" target="_blank" rel="external">点击前往&gt;&gt;</a>；</p>
+<h3 id="u57DF_u540D_u7ED1_u5B9A"><a href="#u57DF_u540D_u7ED1_u5B9A" class="headerlink" title="域名绑定"></a>域名绑定</h3><p>　　当我们将本地的hexo静态博客push到github上建立的repository时，github自动给我们分配了一个二级域名：username.github.io,其中username即是我们的账户名。我们可以通过这个域名访问我们push的Hexo博客，如果我们希望用一个新的，个人所属的域名来替换它，来增加自己的品牌效应时，步骤也非常简单。<br>　　我们可以直接在github上存放Hexo静态博客的repository中增加一个CNAME文件（注意一定要CNAME一定要大写），将自己的个人域名写入保存就行。但这样的缺点是本地每次往repository上push，CNAME都会消失，必须重新添加并编辑；<br>　　另一种方法是本地安装hexo-generator-cname插件，安装方法是进入存放Hexo相关文件的目录，打开Git Bash，输入以下命令：</p>
+<blockquote>
+<p>npm install hexo-generator-cname –save</p>
+</blockquote>
+<p>并在站点配置文件_config.yml中的Plugins字段中增加- hexo-generator-cname，如下图所示</p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo5.jpg" alt="cname"></p>
+</blockquote>
+<p>从此，每次本地编辑完博客后执行“hexo　g”命令，都会在public目录中生成一个CNAME文件，我们只需打开，并写入自己的个人域名，保存后再执行“hexo　ｄ”命令。该方法也有一个问题，就是每次执行“hexo　ｇ”命令后，publish文件夹中都会重新生成一个CNAME文件，我们需要重复编辑个人的域名并保存，才能执行“hexo　ｄ”;  </p>
+<h3 id="u7F16_u5199_u535A_u5BA2"><a href="#u7F16_u5199_u535A_u5BA2" class="headerlink" title="编写博客"></a>编写博客</h3><p>　　Hexo 采用markdown编写博客，进入存放Hexo相关文件的目录，打开“Git　Bash”，输入如下命令  </p>
+<blockquote>
+<p>hexo new post “filename”  </p>
+</blockquote>
+<p>便会在./source/_post目录下生成一个md文件，利用markdown书写软件打开，便可开始编辑自己的博客了，保存后依次输入以下命令，即可push到github。  </p>
+<blockquote>
+<p>hexo clean<br>hexo g<br>hexo d  </p>
+</blockquote>
+<p>如果想在本地先预览下，可以依次输入如下命令，然后打开浏览器，访问“<a href="http://localhost:4000”" target="_blank" rel="external">http://localhost:4000”</a>  </p>
+<blockquote>
+<p>hexo g<br>hexo server</p>
+</blockquote>
+<p>markdown书写软件推荐window系统下我使用的是markdowmPad 2；markdown的语法也较简单，可参考这篇<a href="http://foreverwan.vicp.net/2016/02/03/markdown-note/" target="_blank" rel="external">博文</a></p>
+<h3 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h3><p>　　一些东西在我们看来很难，其实是因为我们对它不够了解，就拿搭建这个个人博客来说，网上有许多不同的实现方法，但如果我们只停留在阅读教程而不是去亲手实践，是无法体会到学习一门新技术的快乐的。重要的还是我们要有一个敢于挑战的心，一种Geek的精神，敢于钻研，就一定会有所收获的。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="Hexo教程" scheme="http://yoursite.com/categories/Hexo%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[markdown语法教程]]></title>
     <link href="http://yoursite.com/2016/02/03/markdown-note/"/>
     <id>http://yoursite.com/2016/02/03/markdown-note/</id>
@@ -1087,104 +1303,6 @@ _   底线
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
       <category term="转载" scheme="http://yoursite.com/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hexo+github搭建个人博客教程]]></title>
-    <link href="http://yoursite.com/2016/02/03/hexo-note/"/>
-    <id>http://yoursite.com/2016/02/03/hexo-note/</id>
-    <published>2016-02-03T08:15:27.000Z</published>
-    <updated>2016-02-07T07:19:51.034Z</updated>
-    <content type="html"><![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
-</blockquote>
-<a id="more"></a>
-<h3 id="u5B89_u88C5_u6B65_u9AA4"><a href="#u5B89_u88C5_u6B65_u9AA4" class="headerlink" title="安装步骤"></a>安装步骤</h3><ul>
-<li>一、下载并安装<a href="http://git-scm.com/download/" target="_blank" rel="external">Git</a>  </li>
-<li>二、下载并安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li>三、在上述安装完成后，在window下打开cmd，输入如下命令，利用npm命令安装hexo  </li>
-</ul>
-<blockquote>
-<p>npm install -g hexo</p>
-</blockquote>
-<ul>
-<li>四、安装完成后，选择某个盘符下建立一个文件夹（比如在D盘建立一个文件夹，命名为HEXO）用来存放建立个人博客所需要的所有文件，并进入该文件夹，在任意位置单击鼠标右键，选择“Git　Bash　here”，打开Git　bash，输入“hexo　init”，来初始化文件夹，成功后，重新进入文件夹，会发现里面已经有文件填充了。</li>
-</ul>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo2.jpg" alt="wenjainjia">  </p>
-<ul>
-<li>deploy_git：执行hexo　deploy命令部署到Github上的内容目录</li>
-<li>public：执行hexo　generate命令，输出的静态网页内容目录</li>
-<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
-<li>scripts：扩展脚本目录，这里可以自定义一些JavaScript脚本</li>
-<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。  <blockquote>
-<ul>
-<li>_drafts：存储草稿文章的目录  </li>
-<li>_posts：存储发布文章的目录</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>themes：主题文件目录</li>
-<li>_config.yml：全局配置文件</li>
-<li>package.json：应用程序数据，指明hexo的版本等信息  </li>
-</ul>
-</blockquote>
-<ul>
-<li>五、登录自己的github账号（没有的可<a href="https://github.com/" target="_blank" rel="external">在此</a>注册），新建一个repository，并用自己的账号名来命名。比如我的github账号为wanjianwei，则我刚刚建立的repository名字应该是wanjianwei.github.io  </li>
-</ul>
-<h3 id="u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A"><a href="#u4E0Egithub_pages_u8FDB_u884C_u7ED1_u5B9A" class="headerlink" title="与github pages进行绑定"></a>与github pages进行绑定</h3><p>　　在完成以上安装步骤后，我们事实上已经在本地搭建了一个简单的hexo博客站点，进入存放hexo相关文件的文件夹，点击鼠标右键-&gt;”Git Bash here”,分别输入以下命令后，即可打开浏览器，访问“<a href="http://localhost:4000”" target="_blank" rel="external">http://localhost:4000”</a>  即可打开hexo的Hello　World界面</p>
-<blockquote>
-<p>hexo　generate;<br>hexo server</p>
-</blockquote>
-<p>只不过此事的hexo静态博客只能在本地访问，为了可以让其他人通过网络访问我们的博客，我们必须将hexo静态博客发布到云空间上，在此我选择的是github。我们进入存放hexo相关文件的文件夹类，打开站点配置文件_config.yml，按下图所示进行配置</p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo3.jpg" alt="hexo_config.yml"></p>
-</blockquote>
-<p>上述的repository要换成自己新建的repository的url，配置完成后，我们即可通过指令将我们在本地生成的hexo静态博客推送到github上了。接下来，我们需要先熟悉下hexo的一些常用<a href="http://www.tuicool.com/articles/yUreInQ" target="_blank" rel="external">指令</a></p>
-<h3 id="u914D_u7F6EHexo_u4E3B_u9898"><a href="#u914D_u7F6EHexo_u4E3B_u9898" class="headerlink" title="配置Hexo主题"></a>配置Hexo主题</h3><p>　　hexo默认自带的主题外观如果无法满足我们的需求，我们可以在github上搜索符合我们需求的主题，在此推荐<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">hexo-theme-next</a>,安装方法和配置方法在其官网上都有详细描述（<a href="http://theme-next.iissnan.com/five-minutes-setup.html" target="_blank" rel="external">点击查看</a>）。  </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo4.jpg" alt="安装教程截图"></p>
-</blockquote>
-<p>它自带有三种布局主题分别为Muse，Mist，Pisces；楼主采用的是Pisces，效果在上文中已展示。需要注意的是第三方服务的安装，比如评论，统计博客浏览情况，这其实也不复杂，在Hexo的官网上也有专门的介绍(<a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">点击查看</a>)。<br>　　在完成上述步骤后，我们就基本为自己搭建了一个独立的个人博客网站，当然，一开始我们会觉得有些不完美，但随着使用的深入，我们都能找到相应解决的方法，逐渐把它改进成自己想要的样子。在改进完善的过程中，往往需要下载一些插件，这里提供一个集合了几乎所有hexo第三方插件的地址，大家如果有需要可以按需要下载<a href="https://hexo.io/plugins/" target="_blank" rel="external">点击前往&gt;&gt;</a>；</p>
-<h3 id="u57DF_u540D_u7ED1_u5B9A"><a href="#u57DF_u540D_u7ED1_u5B9A" class="headerlink" title="域名绑定"></a>域名绑定</h3><p>　　当我们将本地的hexo静态博客push到github上建立的repository时，github自动给我们分配了一个二级域名：username.github.io,其中username即是我们的账户名。我们可以通过这个域名访问我们push的Hexo博客，如果我们希望用一个新的，个人所属的域名来替换它，来增加自己的品牌效应时，步骤也非常简单。<br>　　我们可以直接在github上存放Hexo静态博客的repository中增加一个CNAME文件（注意一定要CNAME一定要大写），将自己的个人域名写入保存就行。但这样的缺点是本地每次往repository上push，CNAME都会消失，必须重新添加并编辑；<br>　　另一种方法是本地安装hexo-generator-cname插件，安装方法是进入存放Hexo相关文件的目录，打开Git Bash，输入以下命令：</p>
-<blockquote>
-<p>npm install hexo-generator-cname –save</p>
-</blockquote>
-<p>并在站点配置文件_config.yml中的Plugins字段中增加- hexo-generator-cname，如下图所示</p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo5.jpg" alt="cname"></p>
-</blockquote>
-<p>从此，每次本地编辑完博客后执行“hexo　g”命令，都会在public目录中生成一个CNAME文件，我们只需打开，并写入自己的个人域名，保存后再执行“hexo　ｄ”命令。该方法也有一个问题，就是每次执行“hexo　ｇ”命令后，publish文件夹中都会重新生成一个CNAME文件，我们需要重复编辑个人的域名并保存，才能执行“hexo　ｄ”;  </p>
-<h3 id="u7F16_u5199_u535A_u5BA2"><a href="#u7F16_u5199_u535A_u5BA2" class="headerlink" title="编写博客"></a>编写博客</h3><p>　　Hexo 采用markdown编写博客，进入存放Hexo相关文件的目录，打开“Git　Bash”，输入如下命令  </p>
-<blockquote>
-<p>hexo new post “filename”  </p>
-</blockquote>
-<p>便会在./source/_post目录下生成一个md文件，利用markdown书写软件打开，便可开始编辑自己的博客了，保存后依次输入以下命令，即可push到github。  </p>
-<blockquote>
-<p>hexo clean<br>hexo g<br>hexo d  </p>
-</blockquote>
-<p>如果想在本地先预览下，可以依次输入如下命令，然后打开浏览器，访问“<a href="http://localhost:4000”" target="_blank" rel="external">http://localhost:4000”</a>  </p>
-<blockquote>
-<p>hexo g<br>hexo server</p>
-</blockquote>
-<p>markdown书写软件推荐window系统下我使用的是markdowmPad 2；markdown的语法也较简单，可参考这篇<a href="http://foreverwan.vicp.net/2016/02/03/markdown-note/" target="_blank" rel="external">博文</a></p>
-<h3 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h3><p>　　一些东西在我们看来很难，其实是因为我们对它不够了解，就拿搭建这个个人博客来说，网上有许多不同的实现方法，但如果我们只停留在阅读教程而不是去亲手实践，是无法体会到学习一门新技术的快乐的。重要的还是我们要有一个敢于挑战的心，一种Geek的精神，敢于钻研，就一定会有所收获的。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>步入程序猿这一行业也有1年多的时间了，在这一年的学习与开发中，总有一些知识点忘了记，记了又忘， 一直想把它们记下来，但又不知道记在什么地方，直到最近，发现网上许多程序猿都喜欢搭个个人独立博客，用来记录记录自己的学习总结，心路历程什么的，觉得这用来装逼不错，有点高大上，于是自己也按照网上的教程鼓捣了一个个人博客，安装平台是windows下，采用的是hexo+github Pages，hexo主题是github上搜的hexo-theme-next，安装好的效果如下所示:    </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/hexo1.jpg" alt="blog截图">  </p>
-</blockquote>]]>
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-      <category term="Hexo教程" scheme="http://yoursite.com/categories/Hexo%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
