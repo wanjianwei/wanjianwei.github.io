@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,github," />
+  <meta name="keywords" content="数据结构，排序," />
 
 
 
@@ -59,24 +59,24 @@
 
 
 
-<meta name="description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta name="description" content="插入排序
+直接插入排序假设待排序的数据存放在R[0…..n-1]，排序过程的某一中间时刻，R被划分成两个子区间R[0…i-1]和R[i…n-1],其中，前一个子区间是已排好序的有序区；后一个子区间则是当前未排序的部分，。直接插入排序的基本操作是将当前无序区的i号元素R[i]插入到有序区R[0…i-1]中适当位置上；（时间复杂度O（n^2）,稳定排序）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git学习之代码仓库提交及分支管理">
-<meta property="og:url" content="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/index.html">
+<meta property="og:title" content="排序常用算法代码示例">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/排序、查找常用算法示例/index.html">
 <meta property="og:site_name" content="万建伟's Blog">
-<meta property="og:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png">
-<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png">
-<meta property="og:updated_time" content="2016-02-23T07:31:51.710Z">
+<meta property="og:description" content="插入排序
+直接插入排序假设待排序的数据存放在R[0…..n-1]，排序过程的某一中间时刻，R被划分成两个子区间R[0…i-1]和R[i…n-1],其中，前一个子区间是已排好序的有序区；后一个子区间则是当前未排序的部分，。直接插入排序的基本操作是将当前无序区的i号元素R[i]插入到有序区R[0…i-1]中适当位置上；（时间复杂度O（n^2）,稳定排序）">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.png">
+<meta property="og:image" content="http://7xqrxz.com1.z0.glb.clouddn.com/%E7%9B%B4%E6%8E%A5%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.png">
+<meta property="og:updated_time" content="2016-03-24T10:15:43.689Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git学习之代码仓库提交及分支管理">
-<meta name="twitter:description" content="git基本命令$ git init　初始化git；$ git add　添加git索引，可以是文件，也可以是目录路径；$ git commit　提交更改；$ git remote add origin https：//github.com/####/###　与远程github的repository关联；$ git remote rm origin　删除与远程仓库的关联$ git push -u or">
+<meta name="twitter:title" content="排序常用算法代码示例">
+<meta name="twitter:description" content="插入排序
+直接插入排序假设待排序的数据存放在R[0…..n-1]，排序过程的某一中间时刻，R被划分成两个子区间R[0…i-1]和R[i…n-1],其中，前一个子区间是已排好序的有序区；后一个子区间则是当前未排序的部分，。直接插入排序的基本操作是将当前无序区的i号元素R[i]插入到有序区R[0…i-1]中适当位置上；（时间复杂度O（n^2）,稳定排序）">
 
 
 
@@ -94,7 +94,7 @@
   };
 </script>
 
-  <title> git学习之代码仓库提交及分支管理 | 万建伟's Blog </title>
+  <title> 排序常用算法代码示例 | 万建伟's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +242,7 @@
             
             
               
-                git学习之代码仓库提交及分支管理
+                排序常用算法代码示例
               
             
           </h1>
@@ -254,8 +254,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-23T14:33:17+08:00" content="2016-02-23">
-              2016-02-23
+            <time itemprop="dateCreated" datetime="2016-03-24T17:49:19+08:00" content="2016-03-24">
+              2016-03-24
             </time>
           </span>
 
@@ -268,8 +268,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/git指令学习/" itemprop="url" rel="index">
-                    <span itemprop="name">git指令学习</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -284,8 +284,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/23/git学习之仓库提交及分支管理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/" itemprop="commentsCount"></span>
+                <a href="/2016/03/24/排序、查找常用算法示例/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/排序、查找常用算法示例/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,54 +306,37 @@
       
 
       
-        <ul>
-<li><strong>git基本命令</strong><br>$ git init　<em>初始化git</em>；<br>$ git add　<em>添加git索引，可以是文件，也可以是目录路径</em>；<br>$ git commit　<em>提交更改</em>；<br>$ git remote add origin https：//github.com/####/###　<em>与远程github的repository关联</em>；<br>$ git remote rm origin　<em>删除与远程仓库的关联</em><br>$ git push -u origin master　<em>将本地项目push到远程仓库中的master分支中，可以替换成其它分支</em>   </li>
+        <h3 id="u63D2_u5165_u6392_u5E8F"><a href="#u63D2_u5165_u6392_u5E8F" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
+<li>直接插入排序<br>假设待排序的数据存放在R[0…..n-1]，排序过程的某一中间时刻，R被划分成两个子区间R[0…i-1]和R[i…n-1],其中，前一个子区间是已排好序的有序区；后一个子区间则是当前未排序的部分，。直接插入排序的基本操作是将当前无序区的i号元素R[i]插入到有序区R[0…i-1]中适当位置上；<strong>（时间复杂度O（n^2）,稳定排序）</strong>   </li>
 </ul>
-<a id="more"></a> 
+<blockquote>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.png" alt="直接插入排序">   </p>
+</blockquote>
+<a id="more"></a>
 <ul>
-<li><strong>分支管理</strong></li>
+<li>希尔排序<br>希尔排序又称为缩小增量排序方法，其基本思想是：把记录按下标的一定增量d分组，对每组记录采用直接插入排序方法进行排序，随着增量逐渐减小，所分成的组包含的记录越来越多，到增量的值减小到1时，整个数据合成一组，则完成排序。<strong>（O(n^1.3),不稳定排序）</strong>   </li>
 </ul>
-<p>一、查看本地分支 git branch<br>名字前有“*”的表示是当前分支   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="查看本地分支">   </p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.png" alt="希尔排序">   </p>
 </blockquote>
-<p>二、查看所有分支（包括远程的） git branch -a<br>其中，颜色为红色的是远程仓库的分支   </p>
+<h3 id="u4EA4_u6362_u6392_u5E8F"><a href="#u4EA4_u6362_u6392_u5E8F" class="headerlink" title="交换排序"></a>交换排序</h3><ul>
+<li>冒泡排序<br>冒泡排序的基本思想：设想被排序的数组R[0…n-1]垂直排列，将每个元素R[i]看作是重量为R[i]的气泡。根据轻气泡不能在重气泡之下的原则，从下往上扫描数组R，凡扫描到违反本原则的轻气泡，就使其向上“漂浮”（两者进行交换），如此反复进行，直到最后任何两个气泡都是轻者在上，重者在下。<strong>（O(n^2),稳定排序）</strong>   </li>
+</ul>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF.png" alt="所有分支">   </p>
-</blockquote>
-<p>三、切换本地分支 git checkout ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%87%E6%8D%A2%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="切换本地分支">   </p>
-</blockquote>
-<p>四、创建本地分支 git branch ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="创建本地分支">   </p>
-</blockquote>
-<p>五、删除本地分支 git branch -d ###   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E4%B9%8B%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF.png" alt="删除本地分支">   </p>
-</blockquote>
-<p>六、创建本地分支与远程分支关联   </p>
-<blockquote>
-<p>$ git checkout dev origin/dev<br>说明：创建本地分支dev，并且和远程origin/dev分支关联，本地dev分支的初始化代码和远程dev分支代码一样；   </p>
-</blockquote>
-<p>七、删除远程分支   </p>
-<blockquote>
-<p>$git push origin <strong>:</strong>branchName<br>冒号前面的空格不能少，原理就是把一个空分支push到server上，相当于删除该分支；   </p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.png" alt="冒泡排序">   </p>
 </blockquote>
 <ul>
-<li><strong>分支切换时可能遇到的问题</strong></li>
+<li>快速排序<br>快速排序是由冒泡排序改进而得到的，它的基本思想是：在待排序的n个记录中任取一个记录（通常取第一个记录），把该记录放入最终位置后，整个数据区间被此记录分割成两个子区间。所有关键字比该记录关键字小的放置在前子区间，所有比它大的放置在后子区间，并把该记录排在这两个子区间的中间，这个过程称为一趟快速排序，之后重复上述步骤<strong>（O(nlogn,不稳定的排序)）</strong>   </li>
 </ul>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png" alt="切换问题"></p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.png" alt="快速排序">   </p>
 </blockquote>
-<p>解决方法一：<br>-f –force，忽略更改，强制切换   </p>
+<h3 id="u9009_u62E9_u6392_u5E8F"><a href="#u9009_u62E9_u6392_u5E8F" class="headerlink" title="选择排序"></a>选择排序</h3><ul>
+<li>直接选择排序   </li>
+</ul>
+<p>简单选择排序基本思想是：第i趟排序开始时，当前的有序区和无序区分别为R[0…i-1]和R[i…n-1]（0&lt;=i&lt;=n-2），它们与直接插入排序法中的有序区和无序区的概念相同。该趟排序是从当前无序区中选出最小的元素R[k]，将它与无序区的i号元素R[i]交换，使R[0…i]和R[i+1…n-1]分别变为新的有序区和无序区<strong>（O(n^2),不稳定排序）</strong>。   </p>
 <blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%951.png" alt="方法一">   </p>
-</blockquote>
-<p>解决方法二：   </p>
-<blockquote>
-<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/git%E8%A7%A3%E5%86%B3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E6%97%B6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%952.png" alt="方法二">  </p>
+<p><img src="http://7xqrxz.com1.z0.glb.clouddn.com/%E7%9B%B4%E6%8E%A5%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.png" alt="直接选择排序"></p>
 </blockquote>
 
       
@@ -363,9 +346,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
-          
-            <a href="/tags/github/" rel="tag">#github</a>
+            <a href="/tags/数据结构，排序/" rel="tag">#数据结构，排序</a>
           
         </div>
       
@@ -374,17 +355,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/23/git-push-后后提示ssh-Could-not-resolve-hostname-github解决方法/" rel="next" title="git push 后后提示ssh:Could not resolve hostname github解决方法">
-                <i class="fa fa-chevron-left"></i> git push 后后提示ssh:Could not resolve hostname github解决方法
+              <a href="/2016/03/07/object-c学习笔记/" rel="next" title="object-c学习笔记">
+                <i class="fa fa-chevron-left"></i> object-c学习笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/07/SSL四次握手过程/" rel="prev" title="SSL四次握手过程">
-                SSL四次握手过程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -399,10 +376,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
-     data-title="git学习之代码仓库提交及分支管理"
+        <div class="ds-share flat" data-thread-key="2016/03/24/排序、查找常用算法示例/"
+     data-title="排序常用算法代码示例"
      data-content=""
-     data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
+     data-url="http://yoursite.com/2016/03/24/排序、查找常用算法示例/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -432,8 +409,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/23/git学习之仓库提交及分支管理/"
-           data-title="git学习之代码仓库提交及分支管理" data-url="http://yoursite.com/2016/02/23/git学习之仓库提交及分支管理/">
+      <div class="ds-thread" data-thread-key="2016/03/24/排序、查找常用算法示例/"
+           data-title="排序常用算法代码示例" data-url="http://yoursite.com/2016/03/24/排序、查找常用算法示例/">
       </div>
     
   </div>
@@ -572,7 +549,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u63D2_u5165_u6392_u5E8F"><span class="nav-number">1.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4EA4_u6362_u6392_u5E8F"><span class="nav-number">2.</span> <span class="nav-text">交换排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u9009_u62E9_u6392_u5E8F"><span class="nav-number">3.</span> <span class="nav-text">选择排序</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
